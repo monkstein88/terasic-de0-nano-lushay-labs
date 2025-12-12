@@ -1,0 +1,10 @@
+Info: Changing the current directory to output directory C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex1/sim_lib ..
+Info: Using Path C:/questasim64_2024.1/win64 that was set in EDA Simulation Library Compiler Options
+Info: Generating commands to compile library cyclonev_ver ...
+Info: Generating commands to compile library cyclonev_hssi_ver ...
+Info: Generating commands to compile library cyclonev_pcie_hip_ver ...
+Info: Executing command file containing library compilation commands
+Info: Reading pref.tcl
+Info: # 2024.1
+Info: # do temp_simlib_comp.tmp
+Info: Successfully compiled the libraries

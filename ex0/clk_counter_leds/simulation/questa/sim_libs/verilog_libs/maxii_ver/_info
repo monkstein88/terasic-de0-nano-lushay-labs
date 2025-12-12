@@ -1,0 +1,474 @@
+m255
+K4
+z2
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex1/sim_lib
+vmaxii_and1
+Z1 2c:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v
+Z2 !s110 1764979262
+!i10b 1
+!s100 f`]KW;3aiZV;X:h<G?g310
+IAZBF9hR>h<d;cc?:K;N5?1
+R0
+Z3 w1761174072
+Z4 8c:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v
+Z5 Fc:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v
+!i122 0
+L0 290 10
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.1;79
+r1
+!s85 0
+31
+Z8 !s108 1764979262.000000
+!s107 c:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v|
+Z9 !s90 -work|maxii_ver|c:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v|
+!i113 0
+Z10 o-work maxii_ver -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vmaxii_and16
+R1
+R2
+!i10b 1
+!s100 OAT6[;Qa8XPaGng3cQ3dc0
+IYI]c[ZI:de3SR5KOg8Ld^2
+R0
+R3
+R4
+R5
+!i122 0
+L0 303 26
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 c:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v|
+R9
+!i113 0
+R10
+R11
+vmaxii_asynch_lcell
+R1
+R2
+!i10b 1
+!s100 ja?U@mh19Rf<6[3d:l61Y1
+IIXGIJKc86U>hKL[bc808T1
+R0
+R3
+R4
+R5
+!i122 0
+L0 464 348
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_b17mux21
+R1
+R2
+!i10b 1
+!s100 ziY>[mm>KofcPO1OMPTn81
+ImnPfkE3VWa;;I;1d3Ad@o1
+R0
+R3
+R4
+R5
+!i122 0
+L0 343 8
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_b5mux21
+R1
+R2
+!i10b 1
+!s100 @d2ao=DCfFHW@:GZ;b[:X3
+IFGLhTb7YcnkTcCeF2BUGa0
+R0
+R3
+R4
+R5
+!i122 0
+L0 364 8
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_bmux21
+R1
+R2
+!i10b 1
+!s100 g21WK=N6YBU8zKb@;oR7m1
+IAY:BBH3?95^ERbF58Dz<21
+R0
+R3
+R4
+R5
+!i122 0
+L0 332 8
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_crcblock
+R1
+R2
+!i10b 1
+!s100 LNCEOQ:C^iOUd^JMZAflN2
+I4h:>STL1EnAEo@E21=ezW2
+R0
+R3
+R4
+R5
+!i122 0
+L0 432 19
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_dffe
+R1
+R2
+!i10b 1
+!s100 CJ3>7D@4==aiU@i]>J;P>1
+I:[JTC931<Ejzl_9on_4P`2
+R0
+R3
+R4
+R5
+!i122 0
+L0 172 46
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_io
+R1
+R2
+!i10b 1
+!s100 VinQV^M1><B0LAoSeg5Pg3
+I2_WK_cG7581^j54g@n1j@0
+R0
+R3
+R4
+R5
+!i122 0
+L0 1553 183
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_jtag
+R1
+R2
+!i10b 1
+!s100 `I<7Ymo:1K7M0WlLWL>=T0
+I>X1KA1P1[d`0M1f7Q8?n70
+R0
+R3
+R4
+R5
+!i122 0
+L0 385 37
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_lcell
+R1
+R2
+!i10b 1
+!s100 YdTQe[=cn?JS2iFk3S1AT0
+I@0]Pk4:7UA0];L^J?Tj_c1
+R0
+R3
+R4
+R5
+!i122 0
+L0 1025 115
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_lcell_register
+R1
+R2
+!i10b 1
+!s100 e;[998@7a0ZG5F>kYSBf`1
+IN6A24dA>;;243EbX9R@NV2
+R0
+R3
+R4
+R5
+!i122 0
+L0 824 187
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_mux21
+R1
+R2
+!i10b 1
+!s100 OCd]meP:W=87dJT?L?5iP3
+I4=YDn70QHl>V1Z3MO>KgY0
+R0
+R3
+R4
+R5
+!i122 0
+L0 222 24
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_mux41
+R1
+R2
+!i10b 1
+!s100 6SYa:^86WTJoh;kC;1Akk0
+IN^Rl^ozN@W`Lc?Bh=Im0E2
+R0
+R3
+R4
+R5
+!i122 0
+L0 249 38
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_nmux21
+R1
+R2
+!i10b 1
+!s100 813=gbQ8Qk<80F?;h1NK:3
+IlL6me[UP8aaCiUL;km^HY2
+R0
+R3
+R4
+R5
+!i122 0
+L0 354 7
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+UMAXII_PRIM_DFFE
+R1
+R2
+!i10b 1
+!s100 dohR?2GU@TQn]hKm@4Yga0
+IecVNBlGmc>G0f_VffOaGk3
+R0
+R3
+R4
+R5
+!i122 0
+L0 23 0
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+n@m@a@x@i@i_@p@r@i@m_@d@f@f@e
+UMAXII_PRIM_DFFEAS
+R1
+R2
+!i10b 1
+!s100 5=11A[a]>9J]c]=fbV?3U1
+I=gNA4Y`jF2bGz?e^glz=I1
+R0
+R3
+R4
+R5
+!i122 0
+L0 96 0
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+n@m@a@x@i@i_@p@r@i@m_@d@f@f@e@a@s
+UMAXII_PRIM_DFFEAS_HIGH
+R1
+R2
+!i10b 1
+!s100 `@=lV<MN3Cb<B7NolLVYP3
+I6k11;miOd620eh4G=P7fH3
+R0
+R3
+R4
+R5
+!i122 0
+L0 134 0
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+n@m@a@x@i@i_@p@r@i@m_@d@f@f@e@a@s_@h@i@g@h
+vmaxii_routing_wire
+R1
+R2
+!i10b 1
+!s100 `MZcBNN;PT7__^cW^CY9N0
+I_47N4e:5WC_EeDmkCOaNK1
+R0
+R3
+R4
+R5
+!i122 0
+L0 1747 25
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
+vmaxii_ufm
+R1
+R2
+!i10b 1
+!s100 P8Wi@IeHkF`7Ee<9Ke;5]0
+IbB[g?@DG]Ka;1jHOcVCAD0
+R0
+R3
+R4
+R5
+!i122 0
+L0 1152 394
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 0
+R10
+R11
