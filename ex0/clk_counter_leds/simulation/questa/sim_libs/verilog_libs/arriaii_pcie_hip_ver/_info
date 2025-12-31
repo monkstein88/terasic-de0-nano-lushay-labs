@@ -1,7 +1,6 @@
 m255
 K4
 z2
-!s11e vcom 2024.1 2024.02, Feb  1 2024
 !s11f vlog 2024.1 2024.02, Feb  1 2024
 13
 !s112 1.1
@@ -11,600 +10,600 @@ z2
 cModel Technology
 Z0 dC:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex1/sim_lib
 varriaii_hssi_pcie_hip
-Z1 !s110 1764979245
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-r1
-!s85 0
-Z3 2c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v
+Z1 2c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v
+Z2 !s110 1764979245
 !i10b 1
 !s100 XYV;nmVW^=8oL^MN[]@nX3
 ICa4^=W0TL`AoL0=86Te4D3
 R0
-Z4 w1761174701
-Z5 8c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v
-Z6 Fc:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v
+Z3 w1761174701
+Z4 8c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v
+Z5 Fc:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v
 !i122 0
 L0 203488 3470
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2024.1;79
+r1
+!s85 0
 31
 Z8 !s108 1764979244.000000
-Z9 !s107 c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v|
-Z10 !s90 -work|arriaii_pcie_hip_ver|c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v|
+!s107 c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v|
+Z9 !s90 -work|arriaii_pcie_hip_ver|c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v|
 !i113 0
-Z11 o-work arriaii_pcie_hip_ver -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z12 tCvgOpt 0
+Z10 o-work arriaii_pcie_hip_ver -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
 varriaii_pciehip_clkmux
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 dWBfO:n?@m]I:6ZiHm7VI1
 I=ab<aW;mF[5ZBbhgQ?[c30
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 1254 119
+R6
 R7
+r1
+!s85 0
 31
 R8
+Z12 !s107 c:/altera/25.1std/quartus/eda/sim_lib/arriaii_pcie_hip_atoms.v|
 R9
-R10
 !i113 0
+R10
 R11
-R12
 varriaii_pciehip_compute_bit
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 e?@fX^fO:RT?EzFezT]Tc1
 Ijm;WRJ;9ZF^OnOZedfdX51
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7394 11
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_16bit
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 knY3hao<]OE0DmfDOMczL1
 Igok_=]KY8e:U12hQ:Y`Nc1
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 1420 204
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_addr
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 geQZE[c4ko[eGUXfDGN>@1
 Iff4lX=iVcc20Z:M=SzlPm3
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 1656 345
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_bit
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 RcP2?:H5GIHGjj0QzecRe3
 IjD@ez=1<V3fN416kZFgL]2
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 1376 40
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_bus_out_mux
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 VI7]i]lV;KK09POVH?KAT2
 I5n?Td:VLYN2OeZV`lZ]iz0
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 3071 561
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_cnt
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 :?kDS^QIfY>=AfIaFT>?U0
 IDn_38Ddkmm^fM^AUGU7U>3
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 2034 166
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_ctl_data
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 L@@iFU`S;QV=bgbX_DM:b1
 I2B3b2Wk>j<:L9iz7HQ:DL2
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 2233 506
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_reg
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 ?XIO0]OHa12Cc@HmN@_R`2
 InbKo?6e1K_k[kA0doSdi;2
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 3634 2231
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_reg_top
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 lhDOCG?H<nzla[6aQX2B11
 I^PX[k=D;jhb]hFKDBQIa;3
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 5867 1050
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_dprio_sm
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 7ioB6NFDM0Sg?][PiN@9e1
 ILbkX]]1I??ZTU]PN;=<692
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 2745 324
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_ecc_chk
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 mWG;JdRUnGFJf=nmU^Q^10
 IRPCLI4=UN>J?ZUEoZili90
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7429 116
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_ecc_decoder
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 A^IR;<TXB[F4WXe>IXKOd2
 IJdk7lbObh3n^[H]7>T^h]2
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7548 14
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_ecc_gen
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 2WM5422EWeC5FIoCEG8Nn0
 I:f3<Xb;7LQ2762NBUKiI13
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7409 19
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_hip_dprio_top
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 KE;c:ClJKTM1oz7`632oe3
 IPkRD[?O8;E3S4IODmUO:>2
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 6921 467
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_hip_mram
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 ]=geD91b6[leH=H8FQ1S80
 IT:S<laSUV9>aQCgH?^4382
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7637 173
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_hip_top
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 OG]ZQUPLiHH39nH[^0aP01
 IE`W7MEE^NW][Qi>5`jOgI0
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 201309 2157
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_iei_detect
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 0F^n?<S?:[b>a77i>_>e71
 IZeU=VYE3@QWS=@^JI9zY13
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 8258 8043
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_mram_top
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 KoC9<Km>:8l^DGBfh=<[a3
 Ii0VGai<Re0=iEEGCTXdmg3
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7813 260
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_param
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 7L57j2=4n;KPf0>`diEj>3
 IUfZh2JmTN_d08AQ5Z5?nC3
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 38 1176
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_pciexp_dcfiforam
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 l4o_kJhl8F]mmg_0BhTfg2
 IY1FDc07eI31bE3lB6d<Ya0
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 8076 38
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_pciexp_dcram_rtry
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 Tk5Zf74_8oSM[zzBfN_ke2
 IZOhOXKiN^C7YfY?d?Q7Zo2
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 8117 53
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_pciexp_dcram_rxvc
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 QTI?i3b]kWlZJ;E;h0S@W3
 IVZRZI>f2idb?[606D>F1k0
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 8173 53
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_pciexp_top_hip
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 MMCZokFOGKCOABn<CI?IF0
 IHE6VXD1[GAnLic>U]8nWm3
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 16334 184968
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11
 varriaii_pciehip_pulse_ext
 R1
 R2
-r1
-!s85 0
-R3
 !i10b 1
 !s100 >]lYz<^1XFjhGj4<R;2zZ1
 I1j8lmBZ3]LU^oHm1d3c]d0
 R0
+R3
 R4
 R5
-R6
 !i122 0
 L0 7565 60
+R6
 R7
+r1
+!s85 0
 31
 R8
-R9
-R10
-!i113 0
-R11
 R12
+R9
+!i113 0
+R10
+R11

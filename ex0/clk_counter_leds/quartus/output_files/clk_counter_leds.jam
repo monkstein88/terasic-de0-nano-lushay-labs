@@ -15,11 +15,11 @@
 'refer to the Altera Software License Subscription Agreements 
 'on the Quartus Prime software download page.
 
-'Device #1: EP4CE22 - C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex0/clk_counter_leds/quartus/output_files/clk_counter_leds.sof Tue Dec  9 23:39:31 2025
+'Device #1: EP4CE22 - C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex0/clk_counter_leds/quartus/output_files/clk_counter_leds.sof Sun Dec  7 22:30:52 2025
 
 
 NOTE "CREATOR" "QUARTUS PRIME JAM COMPOSER 25.1";
-NOTE "DATE" "2025/12/09";
+NOTE "DATE" "2025/12/07";
 NOTE "DEVICE" "EP4CE22";
 NOTE "NEED_FREQUENCY_CONTROL" "0";
 NOTE "FILE" "clk_counter_leds.sof";
@@ -3078,4 +3078,4 @@ ENDPROC;
 
 
 ' END OF FILE
-CRC 2D1A;
+CRC 2242;

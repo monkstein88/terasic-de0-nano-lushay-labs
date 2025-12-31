@@ -1,3 +1,0 @@
-BEGIN 1:clk_counter_leds_top:fast:work
-    clk_counter :  1:clk_counter_leds_top_tb:fast:work
-END 

@@ -50,8 +50,33 @@
             }
         ]
     },
-    "/hdl_tb\\clk_counter_leds_top_tb.sv": {
-        "/hdl_tb\\clk_counter_leds_top_tb.sv+General": [
+    "/simulation\\questa\\clk_counter_leds_top_tb___run_qsim.tcl": {
+        "/simulation\\questa\\clk_counter_leds_top_tb___run_qsim.tcl+General": [
+            {
+                "role": "user",
+                "username": "Monk M.",
+                "content": "How do I combine all my files into a single .do file",
+                "date": "12/22/2025, 8:00:13 PM",
+                "delay": 0,
+                "metadata": {}
+            },
+            {
+                "role": "assistant",
+                "username": "RapidGPT",
+                "content": "Looking at your project structure and the opened TCL file, I can help you create a comprehensive `.do` file that combines all your simulation setup and execution steps. Based on your current setup with QuestaSim/ModelSim, here's how to create a unified `.do` file:\n\n## Creating a Unified Simulation `.do` File\n\nLet me create a comprehensive `.do` file that combines compilation, simulation setup, and execution:\n\n```tcl\n# Create file: run_complete_simulation.do\n\n# ============================================================================\n# Complete Simulation Setup and Execution Script\n# ============================================================================\n\n# Set working directory and create necessary directories\nset project_root [pwd]\ncd ../..\nset design_root [pwd]\n\n# Create simulation directory structure if it doesn't exist\nif {![file exists simulation]} {\n    file mkdir simulation\n}\nif {![file exists simulation/questa]} {\n    file mkdir simulation/questa\n}\n\ncd simulation/questa\n\n# ============================================================================\n# Environment Setup\n# ============================================================================\n\n# Set library paths and simulation libraries\nset PRECOMP_DEVICE_LIB_FILE ./sim_libs/modelsim.ini\n\n# Create work library\nif {[file exists work]} {\n    vdel -lib work -all\n}\nvlib work\nvmap work work\n\n# ============================================================================\n# Compilation Phase\n# ============================================================================\n\necho \"Starting compilation...\"\n\n# Compile design files (adjust paths as needed)\nvlog -sv +incdir+../../hdl ../../hdl/clk_counter_leds_top.sv\n\n# Compile testbench files\nvlog -sv +incdir+../../hdl_tb +incdir+../../hdl ../../hdl_tb/clk_counter_leds_top_tb.sv\n\n# If you have additional files, add them here:\n# vlog -sv additional_file.sv\n# vcom additional_file.vhd\n\necho \"Compilation completed successfully\"\n\n# ============================================================================\n# Simulation Setup and Execution\n# ============================================================================\n\necho \"Starting simulation...\"\n\n# Load the simulation with GUI\nvsim -modelsimini $PRECOMP_DEVICE_LIB_FILE -64 -gui work.clk_counter_leds_top_tb\n\n# ============================================================================\n# Wave Configuration\n# ============================================================================\n\n# Add all signals to wave window\nadd wave -divider \"Clock and Reset\"\nadd wave sim:/clk_counter_leds_top_tb/clk\nadd wave sim:/clk_counter_leds_top_tb/rst_n\n\nadd wave -divider \"DUT Signals\"\nadd wave -radix hex sim:/clk_counter_leds_top_tb/dut/*\n\nadd wave -divider \"Testbench Signals\"\nadd wave sim:/clk_counter_leds_top_tb/*\n\n# Configure wave window\nconfigure wave -namecolwidth 250\nconfigure wave -valuecolwidth 100\nconfigure wave -justifyvalue left\nconfigure wave -signalnamewidth 1\nconfigure wave -snapdistance 10\nconfigure wave -datasetprefix 0\nconfigure wave -rowmargin 4\nconfigure wave -childrowmargin 2\n\n# ============================================================================\n# Run Simulation\n# ============================================================================\n\necho \"Running simulation...\"\n\n# Run for specific time or until finished\nrun -all\n# Alternative: run 1000ns\n\n# Zoom to fit the waveform\nwave zoom full\n\necho \"Simulation completed\"\n\n# ============================================================================\n# Optional: Save workspace and waves\n# ============================================================================\n\n# Save waveform configuration\n# write format wave -window .main_pane.wave.interior.cs.body.pw.wf wave.do\n\n# Save workspace\n# write format workspace -window .main_pane workspace.do\n\necho \"Simulation script completed successfully\"\n```\n\n## Alternative Modular Approach\n\nIf you prefer a more modular approach, you can create separate `.do` files and include them:\n\n**1. Create `compile.do`:**\n```tcl\n# Compilation script\necho \"Compiling design files...\"\nvlog -sv +incdir+../../hdl ../../hdl/clk_counter_leds_top.sv\nvlog -sv +incdir+../../hdl_tb +incdir+../../hdl ../../hdl_tb/clk_counter_leds_top_tb.sv\necho \"Compilation completed\"\n```\n\n**2. Create `waves.do`:**\n```tcl\n# Wave configuration script\nadd wave -divider \"Clock and Reset\"\nadd wave sim:/clk_counter_leds_top_tb/clk\nadd wave sim:/clk_counter_leds_top_tb/rst_n\nadd wave -divider \"DUT Signals\"\nadd wave -radix hex sim:/clk_counter_leds_top_tb/dut/*\nconfigure wave -namecolwidth 250\nconfigure wave -valuecolwidth 100\n```\n\n**3. Create `master.do`:**\n```tcl\n# Master script that calls all others\ndo compile.do\nvsim -gui work.clk_counter_leds_top_tb\ndo waves.do\nrun -all\nwave zoom full\n```\n\n## Usage Instructions\n\n1. **Save the unified script** as `run_complete_simulation.do` in your `simulation/questa/` directory\n\n2. **Run from QuestaSim/ModelSim:**\n   ```\n   do run_complete_simulation.do\n   ```\n\n3. **Or run from command line:**\n   ```bash\n   vsim -do run_complete_simulation.do\n   ```\n\n## Customization Tips\n\n- **Adjust file paths** based on your actual directory structure\n- **Add more design files** in the compilation section as needed\n- **Modify wave signals** to show the specific signals you want to observe\n- **Change simulation time** from `run -all` to specific time like `run 1000ns`\n- **Add assertions or checks** in the simulation section\n\nWould you like me to customize this script further based on your specific file structure or simulation requirements?",
+                "date": "12/22/2025, 8:01:02 PM",
+                "delay": 46.3,
+                "metadata": {
+                    "action": "documentation",
+                    "vendor": null,
+                    "topic": [],
+                    "anchor": []
+                }
+            }
+        ]
+    },
+    "/hdl_tb\\clk_counter_leds_top_tb_1.sv": {
+        "/hdl_tb\\clk_counter_leds_top_tb_1.sv+General": [
             {
                 "role": "user",
                 "username": "Monk M.",

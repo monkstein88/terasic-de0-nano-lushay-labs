@@ -1,4 +1,53 @@
-# Reading pref.tcl
+# do run_qsim_tb_1.do
+# ./sim_libs/modelsim.ini
+# C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex0/clk_counter_leds/simulation/questa/sim_libs/modelsim.ini
+# clk_counter_leds_top_tb_1.sv
+# clk_counter_leds_top_tb_1
+# DUT
+# 
+# Checks if the 'rtl_work' library already exists, deletes the existing library to avoid conflicts. 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Then, create  a new library "rtl_work" and map the default library 'work' to 'rtl_work' , so all compiled files go there.  they'll use your custom ini file
+# vlib rtl_work
+# vmap work rtl_work
+# QuestaSim-64 vmap 2024.1 Lib Mapping Utility 2024.02 Feb  1 2024
+# vmap work rtl_work 
+# Modifying C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex0/clk_counter_leds/simulation/questa/sim_libs/modelsim.ini
+# 
+# compile the SystemVerilog source code in the 'hdl' (design) folder. Note: QuestaSim compiles the design files to library 'work' by default.
+# vlog -sv -work work +incdir+../../hdl/ {../../hdl/*.sv}
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:28:28 on Dec 22,2025
+# vlog -sv -work work "+incdir+../../hdl/" ../../hdl/clk_counter_leds_top.sv 
+# -- Compiling module clk_counter_leds_top
+# 
+# Top level modules:
+# 	clk_counter_leds_top
+# End time: 23:28:28 on Dec 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# compile the SystemVerilog in the 'hdl_tb' (testbench) folder. Note: QuestaSim compiles the design files to library 'work' by default.
+# vlog -sv -work work +incdir+../../hdl_tb/ {../../hdl_tb/*.sv}
+# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+# Start time: 23:28:28 on Dec 22,2025
+# vlog -sv -work work "+incdir+../../hdl_tb/" ../../hdl_tb/clk_counter_leds_top_tb_1.sv 
+# -- Compiling module clk_counter_leds_top_tb_1
+# 
+# Top level modules:
+# 	clk_counter_leds_top_tb_1
+# End time: 23:28:28 on Dec 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# start the Simulator, including some libraries . You must ensure that the first -L entry in all vsim commands is always -L work,  because this alters the way that Questa Intel FPGA Edition searches for module definitions.
+# This technique also helps to eliminate issues caused by duplicate modules shared by multiple IP. 
+# vsim -modelsimini $PRECOMP_DEVICE_LIB_FILE -64 -wlf ./$TESTBENCH_MODULE.wlf -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work -L rtl_work -voptargs="+acc" work.$TESTBENCH_MODULE
+# vsim -modelsimini ./sim_libs/modelsim.ini -64 -wlf ./clk_counter_leds_top_tb_1.wlf -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work -L rtl_work -voptargs=""+acc"" work.clk_counter_leds_top_tb_1 
+# Start time: 23:28:28 on Dec 22,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Sim-64
 # //  Version 2024.1 win64 Feb  1 2024
 # //
@@ -13,7 +62,91 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# ./clk_counter_leds_top_tb.wlf opened as dataset "clk_counter_leds_top_tb"
-# do ./clk_counter_leds_top_tb___wave.do
-# 0 ps
-# 1816 ps
+# Loading sv_std.std
+# Loading work.clk_counter_leds_top_tb_1(fast)
+# Loading work.clk_counter_leds_top(fast)
+# 
+# show waveforms specified as specified below:
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -divider TB_CONTROLS:
+# add wave -noupdate -label TB_CLK_ENA -radix binary -radixshowbase 0 /$TESTBENCH_MODULE/tb_CLK_ena 
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '0'.
+# Executing ONERROR command at macro ./run_qsim_tb_1.do line 42
+# add wave -noupdate -divider CLKs:
+# add wave -noupdate -label EXTCLK -radix binary /$TESTBENCH_MODULE/EXTCLK
+# add wave -noupdate -divider INPUTs:
+# add wave -noupdate -label RESET /$TESTBENCH_MODULE/RST_N
+# add wave -noupdate -divider OUTPUTs:
+# add wave -noupdate -label LEDG /$TESTBENCH_MODULE/LEDG
+# add wave -noupdate -divider DUT_INTERNALS:
+# add wave -noupdate -label clk_counter /$TESTBENCH_MODULE/$TESTBENCH_DUT_NAME/clk_counter 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# quietly wave cursor active 1
+# wave activecursor not supported in batch mode
+# configure wave -namecolwidth 297
+# configure wave not supported in batch mode
+# configure wave -valuecolwidth 100
+# configure wave not supported in batch mode
+# configure wave -justifyvalue left
+# configure wave not supported in batch mode
+# configure wave -signalnamewidth 0
+# configure wave not supported in batch mode
+# configure wave -snapdistance 10
+# configure wave not supported in batch mode
+# configure wave -datasetprefix 0
+# configure wave not supported in batch mode
+# configure wave -rowmargin 4
+# configure wave not supported in batch mode
+# configure wave -childrowmargin 2
+# configure wave not supported in batch mode
+# configure wave -gridoffset 0
+# configure wave not supported in batch mode
+# configure wave -gridperiod 1
+# configure wave not supported in batch mode
+# configure wave -griddelta 40
+# configure wave not supported in batch mode
+# configure wave -timeline 0
+# configure wave not supported in batch mode
+# configure wave -timelineunits ns
+# configure wave not supported in batch mode
+# update
+# wave zoom out
+# wave zoomout not supported in batch mode
+# WaveRestoreZoom {0 ns} {3098 ns}
+# 
+#run the simulation for the desired amount of time 
+# view structure
+# view signals
+# run -all
+#                    0<< Starting LED COUNTER Simulation >>
+# Time: [0] |  DUT.clk_counter: 0 | LEDG: 0 |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# SUCCESS: clk_counter correctly initialized to 0x00000000
+# SUCCESS: LEDG correctly initialized to 0x00
+# SUCCESS: clk_counter correctly held at 0x00000000 while reset is asserted
+# SUCCESS: LEDG correctly held at 0x00 while reset is asserted
+# SUCCESS: clk_counter incremented correctly to 0x0000000A
+# SUCCESS: clk_counter correctly reset to 0x00000000 immediately after reset
+# Time: [335544750000] |  DUT.clk_counter: 1000000 | LEDG: 1 |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# Time: [671089070000] |  DUT.clk_counter: 2000000 | LEDG: 2 |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# Time: [1006633390000] |  DUT.clk_counter: 3000000 | LEDG: 3 |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# Time: [1342177710000] |  DUT.clk_counter: 4000000 | LEDG: 4 |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# SUCCESS: LEDG correctly reached 0x04
+# Time: [1342177730000] |  DUT.clk_counter: fffffffe | LEDG: ff |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# SUCCESS: LEDG correctly forced to 0xFF
+# Time: [1342177770000] |  DUT.clk_counter: 0 | LEDG: 0 |
+#   OK: LEDG matches the upper 8 bits of clk_counter.
+# SUCCESS: clk_counter correctly wrapped to 0x00000000 after overflow
+# SUCCESS: LEDG correctly reset to 0x00 after overflow wrap
+#           1342177790<< LED COUNTER Simulation Complete >>
+# ** Note: $finish    : ../../hdl_tb/clk_counter_leds_top_tb_1.sv(133)
+#    Time: 1342177790 ns  Iteration: 1  Instance: /clk_counter_leds_top_tb_1
+# End time: 23:31:16 on Dec 22,2025, Elapsed time: 0:02:48
+# Errors: 0, Warnings: 1
