@@ -3,7 +3,7 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'EXTCLK'
-Slack : 16.390
+Slack : 16.426
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'EXTCLK'
@@ -11,15 +11,15 @@ Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EXTCLK'
-Slack : 9.588
+Slack : 9.587
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'EXTCLK'
-Slack : 16.801
+Slack : 16.832
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'EXTCLK'
-Slack : 0.312
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EXTCLK'
@@ -27,7 +27,7 @@ Slack : 9.596
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'EXTCLK'
-Slack : 17.952
+Slack : 17.981
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'EXTCLK'
@@ -35,7 +35,7 @@ Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EXTCLK'
-Slack : 9.248
+Slack : 9.250
 TNS   : 0.000
 
 ------------------------------------------------------------

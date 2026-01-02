@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clk_counter_leds
-Thu Jan  1 23:41:38 2026
+Fri Jan  2 02:35:40 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 
 
@@ -45,15 +45,15 @@ on the Quartus Prime software download page.
 +------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                             ;
 +------------------------------------+-----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan  1 23:41:38 2026               ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan  2 02:35:40 2026               ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Standard Edition ;
 ; Revision Name                      ; clk_counter_leds                                    ;
 ; Top-level Entity Name              ; clk_counter_leds_top                                ;
 ; Family                             ; Cyclone IV E                                        ;
-; Total logic elements               ; 69                                                  ;
-;     Total combinational functions  ; 69                                                  ;
-;     Dedicated logic registers      ; 33                                                  ;
-; Total registers                    ; 33                                                  ;
+; Total logic elements               ; 68                                                  ;
+;     Total combinational functions  ; 68                                                  ;
+;     Dedicated logic registers      ; 32                                                  ;
+; Total registers                    ; 32                                                  ;
 ; Total pins                         ; 11                                                  ;
 ; Total virtual pins                 ; 0                                                   ;
 ; Total memory bits                  ; 0                                                   ;
@@ -182,20 +182,20 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 69           ;
+; Estimated Total logic elements              ; 68           ;
 ;                                             ;              ;
-; Total combinational functions               ; 69           ;
+; Total combinational functions               ; 68           ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 10           ;
-;     -- 3 input functions                    ; 15           ;
-;     -- <=2 input functions                  ; 44           ;
+;     -- 4 input functions                    ; 11           ;
+;     -- 3 input functions                    ; 5            ;
+;     -- <=2 input functions                  ; 52           ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
 ;     -- normal mode                          ; 40           ;
-;     -- arithmetic mode                      ; 29           ;
+;     -- arithmetic mode                      ; 28           ;
 ;                                             ;              ;
-; Total registers                             ; 33           ;
-;     -- Dedicated logic registers            ; 33           ;
+; Total registers                             ; 32           ;
+;     -- Dedicated logic registers            ; 32           ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 11           ;
@@ -203,9 +203,9 @@ on the Quartus Prime software download page.
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; EXTCLK~input ;
-; Maximum fan-out                             ; 33           ;
-; Total fan-out                               ; 296          ;
-; Average fan-out                             ; 2.39         ;
+; Maximum fan-out                             ; 32           ;
+; Total fan-out                               ; 283          ;
+; Average fan-out                             ; 2.32         ;
 +---------------------------------------------+--------------+
 
 
@@ -214,7 +214,7 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name          ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+----------------------+--------------+
-; |clk_counter_leds_top      ; 69 (69)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |clk_counter_leds_top ; clk_counter_leds_top ; work         ;
+; |clk_counter_leds_top      ; 68 (68)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |clk_counter_leds_top ; clk_counter_leds_top ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -224,10 +224,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
@@ -239,7 +239,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |clk_counter_leds_top|clk_counter[24] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |clk_counter_leds_top|clk_counter[23] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
@@ -261,22 +261,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 33                          ;
-;     CLR               ; 26                          ;
+; cycloneiii_ff         ; 32                          ;
+;     CLR               ; 25                          ;
 ;     CLR SCLR          ; 1                           ;
 ;     ENA CLR           ; 6                           ;
-; cycloneiii_lcell_comb ; 69                          ;
-;     arith             ; 29                          ;
-;         2 data inputs ; 28                          ;
+; cycloneiii_lcell_comb ; 68                          ;
+;     arith             ; 28                          ;
+;         2 data inputs ; 27                          ;
 ;         3 data inputs ; 1                           ;
 ;     normal            ; 40                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 10                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 3.34                        ;
+; Max LUT depth         ; 4.30                        ;
+; Average LUT depth     ; 3.29                        ;
 +-----------------------+-----------------------------+
 
 
@@ -285,7 +285,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -295,15 +295,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
-    Info: Processing started: Thu Jan  1 23:41:31 2026
+    Info: Processing started: Fri Jan  2 02:35:25 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clk_counter_leds -c clk_counter_leds
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /users/monkpc/workspaces/fpga/intel/cycloneiv/de0-nano/terasic-de0-nano-lushay-labs/ex1/clk_counter_leds/hdl/clk_counter_leds_top.sv
     Info (12023): Found entity 1: clk_counter_leds_top File: C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex1/clk_counter_leds/hdl/clk_counter_leds_top.sv Line: 2
 Info (12127): Elaborating entity "clk_counter_leds_top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at clk_counter_leds_top.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex1/clk_counter_leds/hdl/clk_counter_leds_top.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at clk_counter_leds_top.sv(45): truncated value with size 32 to match size of target (7) File: C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex1/clk_counter_leds/hdl/clk_counter_leds_top.sv Line: 45
 Info (286030): Timing-Driven Synthesis is running
 Info (128000): Starting physical synthesis optimizations for speed
 Info (332104): Reading SDC File: '../constraints/timing_de0nano_brd.sdc'
@@ -321,14 +319,14 @@ Info (128003): Physical synthesis algorithm combinational resynthesis using bool
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 69 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info (21061): Implemented 68 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4911 megabytes
-    Info: Processing ended: Thu Jan  1 23:41:38 2026
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Fri Jan  2 02:35:40 2026
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:16
 
 

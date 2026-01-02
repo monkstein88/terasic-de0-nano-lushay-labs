@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Jan  1 23:41:44 2026
+Fitter Status : Successful - Fri Jan  2 02:35:46 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 Revision Name : clk_counter_leds
 Top-level Entity Name : clk_counter_leds_top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 69 / 22,320 ( < 1 % )
-    Total combinational functions : 69 / 22,320 ( < 1 % )
-    Dedicated logic registers : 33 / 22,320 ( < 1 % )
-Total registers : 33
+Total logic elements : 68 / 22,320 ( < 1 % )
+    Total combinational functions : 68 / 22,320 ( < 1 % )
+    Dedicated logic registers : 32 / 22,320 ( < 1 % )
+Total registers : 32
 Total pins : 11 / 154 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )

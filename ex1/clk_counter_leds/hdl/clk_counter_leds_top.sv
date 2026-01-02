@@ -33,23 +33,18 @@ module clk_counter_leds_top #(
       clk_counter <= '0;
       led_counter <= '0;
       overflow    <= 1'b0;
-    end else begin 
-      if(enable) begin
-        clk_counter <= clk_counter + 1;
+    end else if(enable) begin
+        clk_counter <= clk_counter + 1'b1;
         if(clk_counter == (COUNT_FREQ-1)) begin 
           clk_counter <= '0;
-          if(led_counter == {LED_CNTR_WIDTH{1'b1}})
-            overflow <= 1'b1; // Indicate an overflow - when (the moment) the counter rolls over (becomes 0). This is supposed to be just 1 count cycle pulse
-          else 
-            overflow <= 1'b0;
-          led_counter <= led_counter + 1;
+          overflow <= (led_counter == {LED_CNTR_WIDTH{1'b1}}); // Indicate an overflow - when (the moment) the counter rolls over (becomes 0). This is supposed to be just 1 count cycle pulse
+          led_counter <= led_counter + 1'b1;
         end
-      end else begin 
+    end else begin 
         overflow <= 1'b0; // if counting is disabled - stop indicating oveflow immeadiately
         clk_counter <= '0; // Zero the clock counter also, so the wait time (counting frequency) is preserved when enabled back again afterwards.
       end 
-    end   
-  end 
+  end    
   
   // Output (continous) assignments:
   assign LEDG[LED_CNTR_WIDTH-1:0] = led_counter; // Use the 7 LSb of the LEDG to indicate counter value  

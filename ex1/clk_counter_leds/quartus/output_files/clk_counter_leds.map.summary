@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu Jan  1 23:41:38 2026
+Analysis & Synthesis Status : Successful - Fri Jan  2 02:35:40 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 Revision Name : clk_counter_leds
 Top-level Entity Name : clk_counter_leds_top
 Family : Cyclone IV E
-Total logic elements : 69
-    Total combinational functions : 69
-    Dedicated logic registers : 33
-Total registers : 33
+Total logic elements : 68
+    Total combinational functions : 68
+    Dedicated logic registers : 32
+Total registers : 32
 Total pins : 11
 Total virtual pins : 0
 Total memory bits : 0
