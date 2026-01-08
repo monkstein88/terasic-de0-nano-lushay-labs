@@ -110,10 +110,6 @@ module clk_counter_leds_top_tb;
       wait_clocks(cycles_to_overflow);
       check_ledg_correctness();
     end
-    // Wait one more LED increment period to check post-overflow behaviour 
-    wait_till_led_increment();
-    // Plus 100 extra clock cycle to ensure and make visible the overflow indication is cleared
-    wait_clocks(100);
     
     // Testbench summary report
     $display("\n================================================================================");
@@ -201,7 +197,7 @@ module clk_counter_leds_top_tb;
     begin 
       repeat(num_clocks) begin 
         @(posedge EXTCLK);
-        if(KEY[1] == 1'b0) begin // If counting is enabled
+        if(KEY1 == 1'b0) begin // If counting is enabled
           if(expected_clk_counter == COUNT_FREQ-1)begin 
             if(expected_led_counter == (2**LEDG_CNTR_WIDTH)-1) begin 
               expected_overflow = 1'b1;
@@ -212,8 +208,8 @@ module clk_counter_leds_top_tb;
           end
           expected_clk_counter = (expected_clk_counter + 1) % COUNT_FREQ;
         end
+        $display("[INFO]  Waited %0d clock cycles", num_clocks);
       end
-      $display("[INFO]  Waited %0d clock cycles", num_clocks);
     end
   endtask   
 
@@ -335,7 +331,7 @@ module clk_counter_leds_top_tb;
   // =============================================================================
   initial begin 
     $dumpfile("clk_counter_leds_top_tb.vcd"); // VCD file for GTKWave or other waveform viewer 
-    // $dumpvars(0, clk_counter_leds_top_tb); // dump all signals of this TB and below. Note:  Commented out to reduce VCD size and runtime.
+    $dumpvars(0, clk_counter_leds_top_tb); // dump all signals of this TB and below  
     // Add flush points for better waveform viewing
     forever begin 
       @((negedge KEY[0], posedge KEY[0]) or (negedge KEY[1], posedge KEY[1])) // When we either Reset or Enable the clock/led counter - flush vcd

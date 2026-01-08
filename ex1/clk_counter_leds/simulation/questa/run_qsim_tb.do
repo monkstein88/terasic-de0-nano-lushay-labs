@@ -1,4 +1,4 @@
-# QuestaSim simulation script for clk_counter_leds_top_tb_1.sv testbench
+# QuestaSim simulation script for clk_counter_leds_top_tb.sv testbench
 
 # stop any simulation that is currently running 
 quit -sim 
@@ -10,7 +10,7 @@ set env(MODELSIM) [file normalize $PRECOMP_DEVICE_LIB_FILE]
 
 # Define the testbench file and module names
 set TESTBENCH_FILE clk_counter_leds_top_tb_1.sv
-set TESTBENCH_MODULE clk_counter_leds_top_tb_1
+set TESTBENCH_MODULE clk_counter_leds_top_tb
 # Define the DUT (Device Under Test) instance name within the testbench
 set TESTBENCH_DUT_NAME DUT
 
@@ -39,15 +39,18 @@ vsim -modelsimini $PRECOMP_DEVICE_LIB_FILE -64 -wlf ./$TESTBENCH_MODULE.wlf -t 1
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider TB_CONTROLS:
-add wave -noupdate -label TB_CLK_ENA -radix binary -radixshowbase 0 /$TESTBENCH_MODULE/tb_CLK_ena 
+add wave -noupdate -label -NONE-
 add wave -noupdate -divider CLKs:
 add wave -noupdate -label EXTCLK -radix binary /$TESTBENCH_MODULE/EXTCLK
 add wave -noupdate -divider INPUTs:
-add wave -noupdate -label RESET /$TESTBENCH_MODULE/RST_N
+add wave -noupdate -label RESET /$TESTBENCH_MODULE/KEY[0]
+add wave -noupdate -label ENABLE /$TESTBENCH_MODULE/KEY[1]
 add wave -noupdate -divider OUTPUTs:
 add wave -noupdate -label LEDG /$TESTBENCH_MODULE/LEDG
 add wave -noupdate -divider DUT_INTERNALS:
-add wave -noupdate -label clk_counter /$TESTBENCH_MODULE/$TESTBENCH_DUT_NAME/clk_counter 
+add wave -noupdate -label clk_counter  /$TESTBENCH_MODULE/$TESTBENCH_DUT_NAME/clk_counter 
+add wave -noupdate -label led_counter /$TESTBENCH_MODULE/$TESTBENCH_DUT_NAME/led_counter
+add wave -noupdate -label overflow /$TESTBENCH_MODULE/$TESTBENCH_DUT_NAME/overflow
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ns} 0}
 quietly wave cursor active 1
