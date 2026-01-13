@@ -1,0 +1,579 @@
+Info: Changing the current directory to output directory C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex1/sim_lib ..
+Info: Using Path C:/questasim64_2024.1/win64 that was set in EDA Simulation Library Compiler Options
+Info: Generating commands to compile library stratixiv_hssi_ver ...
+Info: Generating commands to compile library stratixiv_pcie_hip_ver ...
+Info: Generating commands to compile library stratixiv_ver ...
+Info: Executing command file containing library compilation commands
+Info: Reading pref.tcl
+Info: # 2024.1
+Info: # do temp_simlib_comp.tmp
+Info: # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Info: # Start time: 02:01:05 on Dec 06,2025
+Info: # vlog -work stratixiv_hssi_ver c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v 
+Info: # -- Compiling module stratixiv_hssi_aux_clock_div
+Info: # -- Compiling module stratixiv_hssi_aux_clock_mult
+Info: # -- Compiling module stratixiv_hssi_pma_c_divby2q
+Info: # -- Compiling module stratixiv_hssi_pma_c_controller_4t16
+Info: # -- Compiling module stratixiv_hssi_pma_c_clkgendrv
+Info: # -- Compiling module stratixiv_hssi_pma_c_clkgenbuf
+Info: # -- Compiling module stratixiv_hssi_pma_c_clkgenbuf_cmu
+Info: # -- Compiling module stratixiv_hssi_pma_c_d2a_mbpass
+Info: # -- Compiling module stratixiv_hssi_pma_c_tx_clkmux_cmu
+Info: # -- Compiling module stratixiv_hssi_pma_c_deser_pcie
+Info: # -- Compiling module stratixiv_hssi_pma_c_deser_10to20
+Info: # -- Compiling module stratixiv_hssi_pma_c_deser_ff_chain
+Info: # -- Compiling module stratixiv_hssi_pma_c_deser_fsd_rst
+Info: # -- Compiling module stratixiv_hssi_pma_c_deser
+Info: # -- Compiling module stratixiv_hssi_pma_c_div4or5_mcnt
+Info: # -- Compiling module stratixiv_hssi_pma_c_lockdet_tx18
+Info: # -- Compiling module stratixiv_hssi_pma_c_pfd
+Info: # -- Compiling module stratixiv_hssi_pma_c_rlpbk_ctrl
+Info: # -- Compiling module stratixiv_hssi_pma_c_rlpbk_mux
+Info: # -- Compiling module stratixiv_hssi_pma_c_rx
+Info: # -- Compiling module stratixiv_hssi_pma_c_ser_20to10
+Info: # -- Compiling module stratixiv_hssi_pma_c_ser
+Info: # -- Compiling module stratixiv_hssi_pma_c_sdl_en_2x
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_detect_div_by_2
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_detect_clk_gen
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_detect_sync
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_detect_fsm
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_detect_control
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_det_digital
+Info: # -- Compiling module stratixiv_hssi_pma_c_rcv_detect
+Info: # -- Compiling module stratixiv_hssi_pma_c_tx
+Info: # -- Compiling module stratixiv_hssi_pma_ppmdetect
+Info: # -- Compiling module stratixiv_hssi_pma_c_ser_10g
+Info: # -- Compiling module stratixiv_hssi_pma_c_deser_10g
+Info: # -- Compiling module stratixiv_hssi_pma_c_pcie_sw
+Info: # -- Compiling module stratixiv_hssi_pma_c_clkgendrv_tx10g
+Info: # -- Compiling module stratixiv_hssi_pma_c_clkgenbuf_tx10g
+Info: # -- Compiling module stratixiv_hssi_clock_divider
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4497): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4498): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4499): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4500): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4501): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4503): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4505): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4506): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4507): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4508): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4509): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4510): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4511): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4515): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4517): Carriage return (0x0D) is not followed by a newline (0x0A).
+Info: # -- Compiling module stratixiv_hssi_pll
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4542): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4544): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4546): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4547): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4569): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4573): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4574): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4596): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4598): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4651): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4653): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4659): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4661): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4663): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4664): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4666): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4668): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4669): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4670): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4673): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4674): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4675): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4677): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4695): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4713): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4731): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4749): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4752): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4758): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4759): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4760): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4762): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4772): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4782): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4796): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4802): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4811): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4812): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4813): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4815): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4825): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4835): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4849): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4855): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4860): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4861): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4862): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4864): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4874): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4884): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4898): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4904): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4911): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4924): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4925): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4926): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4928): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4938): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4948): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4962): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4968): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4972): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4973): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4974): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4976): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4986): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(4996): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5010): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5016): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5019): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5020): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5021): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5023): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5033): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5043): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5057): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5063): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5067): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5070): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5072): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5078): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5079): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5080): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5086): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5087): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5088): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5090): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5108): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5109): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5110): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5131): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5138): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5150): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5151): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5184): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5200): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5232): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5243): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5258): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5260): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5276): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5299): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5305): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5328): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5334): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5344): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5382): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5391): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5448): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5457): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5488): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5495): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5503): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_hssi_atoms.v(5566): Carriage return (0x0D) is not followed by a newline (0x0A).
+Info: # -- Compiling module stratixiv_hssi_tx_pma
+Info: # -- Compiling module stratixiv_hssi_rx_pma
+Info: # -- Compiling module stratixiv_hssi_pcs_reset
+Info: # -- Compiling module stratixiv_hssi_digi_chnl_hip_spt
+Info: # -- Compiling module stratixiv_hssi_phystatus_generator_fsm
+Info: # -- Compiling module stratixiv_hssi_phystatus_generator
+Info: # -- Compiling module stratixiv_hssi_rx_pipe_interface
+Info: # -- Compiling module stratixiv_hssi_tx_pipe_interface
+Info: # -- Compiling module stratixiv_hssi_q_pipe_interface_top
+Info: # -- Compiling module stratixiv_hssi_tx_digis_txclk_gating
+Info: # -- Compiling module stratixiv_hssi_tx_digi_txclk_ctl
+Info: # -- Compiling module stratixiv_hssi_tx_digis_ram8x49_syn
+Info: # -- Compiling module stratixiv_hssi_tx_digis_ph_fifo
+Info: # -- Compiling module stratixiv_hssi_tx_digi_tx_ctrl
+Info: # -- Compiling module stratixiv_hssi_tx_digi_bist_gen
+Info: # -- Compiling module stratixiv_hssi_tx_digi_prbs_gen
+Info: # -- Compiling module stratixiv_hssi_tx_digi_enc_chnl_top
+Info: # -- Compiling module stratixiv_hssi_tx_digi_iq_pipe_tx
+Info: # -- Compiling module stratixiv_hssi_tx_digi
+Info: # -- Compiling module stratixiv_hssi_tx_pcs
+Info: # -- Compiling module stratixiv_hssi_rx_digis_ph_fifo
+Info: # -- Compiling module stratixiv_hssi_rx_digis_ram16x14_syn
+Info: # -- Compiling module stratixiv_hssi_rx_digis_ram20x16_syn
+Info: # -- Compiling module stratixiv_hssi_rx_digis_ram8x70_syn
+Info: # -- Compiling module stratixiv_hssi_rx_digis_rxclk_gating
+Info: # -- Compiling module stratixiv_hssi_rx_digi_rxclk_ctl
+Info: # -- Compiling module stratixiv_hssi_rx_digi_auto_speed_neg
+Info: # -- Compiling module stratixiv_hssi_rx_digi_bist_ver
+Info: # -- Compiling module stratixiv_hssi_rx_digi_cdr_ctrl
+Info: # -- Compiling module stratixiv_hssi_rx_digi_comp_chnl_top
+Info: # -- Compiling module stratixiv_hssi_rx_digi_rx_ctrl
+Info: # -- Compiling module stratixiv_hssi_rx_digi_dec_chnl_top
+Info: # -- Compiling module stratixiv_hssi_rx_digi_dskw_fifo
+Info: # -- Compiling module stratixiv_hssi_rx_digi_freqdet
+Info: # -- Compiling module stratixiv_hssi_rx_digi_eii_module
+Info: # -- Compiling module stratixiv_hssi_rx_digi_pcs_channel_testbus
+Info: # -- Compiling module stratixiv_hssi_rx_digi_iq_pipe_rx
+Info: # -- Compiling module stratixiv_hssi_rx_digi_prbs_ver
+Info: # -- Compiling module stratixiv_hssi_rx_digi_wordalign
+Info: # -- Compiling module stratixiv_hssi_rx_digi
+Info: # -- Compiling module stratixiv_hssi_rx_pcs
+Info: # -- Compiling module stratixiv_hssi_dskw_sm
+Info: # -- Compiling module stratixiv_hssi_tx_sm
+Info: # -- Compiling module stratixiv_hssi_rcv_sm
+Info: # -- Compiling module stratixiv_hssi_cmu_chnl_reset
+Info: # -- Compiling module stratixiv_hssi_cmu_quad_reset
+Info: # -- Compiling module stratixiv_hssi_cmu_auto_speed_neg
+Info: # -- Compiling module stratixiv_hssi_cmu_clk_gating
+Info: # -- Compiling module stratixiv_hssi_cmu_clk_ctl
+Info: # -- Compiling module stratixiv_hssi_cmu_rx_ctrl
+Info: # -- Compiling module stratixiv_hssi_cmu_rxclk_gating
+Info: # -- Compiling module stratixiv_hssi_cmu_rxclk_ctl
+Info: # -- Compiling module stratixiv_hssi_cmu_tx_ctrl
+Info: # -- Compiling module stratixiv_hssi_cmu_txclk_gating
+Info: # -- Compiling module stratixiv_hssi_cmu_txclk_ctl
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_bit
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_bit_pma
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_16bit
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_16bit_pma
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_reg_chnl
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_chnl_bus_out_mux
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_chnl_top
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_status
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_addr
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_cnt
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_ctl_data
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_sm
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_reg_centrl
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_centrl_bus_out_mux
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_centrl_top
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_map_index
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_map
+Info: # -- Compiling module stratixiv_hssi_cmu_dprio_top
+Info: # -- Compiling module stratixiv_hssi_cmu
+Info: # -- Compiling module stratixiv_hssi_calibration_block
+Info: # -- Compiling module stratixiv_hssi_refclk_divider
+Info: # -- Compiling module stratixiv_hssi_pma_c_adce
+Info: # 
+Info: # Top level modules:
+Info: # 	stratixiv_hssi_pma_c_d2a_mbpass
+Info: # 	stratixiv_hssi_pma_c_div4or5_mcnt
+Info: # 	stratixiv_hssi_pma_c_lockdet_tx18
+Info: # 	stratixiv_hssi_pma_c_pfd
+Info: # 	stratixiv_hssi_pma_c_rlpbk_ctrl
+Info: # 	stratixiv_hssi_pma_c_sdl_en_2x
+Info: # 	stratixiv_hssi_clock_divider
+Info: # 	stratixiv_hssi_pll
+Info: # 	stratixiv_hssi_tx_pma
+Info: # 	stratixiv_hssi_rx_pma
+Info: # 	stratixiv_hssi_tx_pcs
+Info: # 	stratixiv_hssi_rx_pcs
+Info: # 	stratixiv_hssi_cmu
+Info: # 	stratixiv_hssi_calibration_block
+Info: # 	stratixiv_hssi_refclk_divider
+Info: # End time: 02:01:06 on Dec 06,2025, Elapsed time: 0:00:01
+Info: # Errors: 0, Warnings: 129
+Info: # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Info: # Start time: 02:01:06 on Dec 06,2025
+Info: # vlog -work stratixiv_pcie_hip_ver c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v 
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(28): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(29): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(30): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(31): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(32): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(33): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(34): Carriage return (0x0D) is not followed by a newline (0x0A).
+Info: # -- Compiling module stratixiv_pciehip_param
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(46): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(47): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(48): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(52): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(55): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(98): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(125): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(127): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(128): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(129): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(130): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(131): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(227): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(228): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(229): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(232): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(233): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(234): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(235): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(236): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(237): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(240): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(245): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(246): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(247): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(248): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(250): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(255): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(260): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(263): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(266): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(267): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(269): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(270): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(283): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(285): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(286): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(287): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(288): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(289): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(291): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(295): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(308): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(309): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(310): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(312): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(317): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(322): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(327): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(334): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(337): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(359): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(360): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(362): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(363): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(374): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(375): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(376): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(489): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(490): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(491): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(503): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(504): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(507): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(509): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(521): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(557): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(559): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(570): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(571): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(572): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(573): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(574): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(575): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(578): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(579): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(580): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(582): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(584): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(597): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(609): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(654): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(656): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(669): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(672): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(677): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(679): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(694): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(702): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(721): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(722): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(731): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(785): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(876): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(882): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(883): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(886): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(888): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(892): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(893): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(894): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(896): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(901): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(918): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(919): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(944): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(945): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(946): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(955): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(956): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(963): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(973): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(980): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(1087): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(1088): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(1089): Carriage return (0x0D) is not followed by a newline (0x0A).
+Warning: # ** Warning: (vlog-2083) c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_pcie_hip_atoms.v(1204): Carriage return (0x0D) is not followed by a newline (0x0A).
+Info: # -- Compiling module stratixiv_pciehip_clkmux
+Info: # -- Compiling module stratixiv_pciehip_dprio_bit
+Info: # -- Compiling module stratixiv_pciehip_dprio_16bit
+Info: # -- Compiling module stratixiv_pciehip_dprio_addr
+Info: # -- Compiling module stratixiv_pciehip_dprio_cnt
+Info: # -- Compiling module stratixiv_pciehip_dprio_ctl_data
+Info: # -- Compiling module stratixiv_pciehip_dprio_sm
+Info: # -- Compiling module stratixiv_pciehip_dprio_bus_out_mux
+Info: # -- Compiling module stratixiv_pciehip_dprio_reg
+Info: # -- Compiling module stratixiv_pciehip_dprio_reg_top
+Info: # -- Compiling module stratixiv_pciehip_hip_dprio_top
+Info: # -- Compiling module stratixiv_pciehip_compute_bit
+Info: # -- Compiling module stratixiv_pciehip_ecc_gen
+Info: # -- Compiling module stratixiv_pciehip_ecc_chk
+Info: # -- Compiling module stratixiv_pciehip_ecc_decoder
+Info: # -- Compiling module stratixiv_pciehip_pulse_ext
+Info: # -- Compiling module stratixiv_pciehip_hip_mram
+Info: # -- Compiling module stratixiv_pciehip_mram_top
+Info: # -- Compiling module stratixiv_pciehip_pciexp_dcfiforam
+Info: # -- Compiling module stratixiv_pciehip_pciexp_dcram_rtry
+Info: # -- Compiling module stratixiv_pciehip_pciexp_dcram_rxvc
+Info: # -- Compiling module stratixiv_pciehip_iei_detect
+Info: # -- Compiling module stratixiv_pciehip_pciexp_top_hip
+Info: # -- Compiling module stratixiv_pciehip_hip_top
+Info: # -- Compiling module stratixiv_hssi_pcie_hip
+Info: # 
+Info: # Top level modules:
+Info: # 	stratixiv_hssi_pcie_hip
+Info: # End time: 02:01:07 on Dec 06,2025, Elapsed time: 0:00:01
+Info: # Errors: 0, Warnings: 124
+Info: # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Info: # Start time: 02:01:07 on Dec 06,2025
+Info: # vlog -work stratixiv_ver c:/altera/25.1std/quartus/eda/sim_lib/stratixiv_atoms.v 
+Info: # -- Compiling UDP STRATIXIV_PRIM_DFFE
+Info: # -- Compiling UDP STRATIXIV_PRIM_DFFEAS
+Info: # -- Compiling UDP STRATIXIV_PRIM_DFFEAS_HIGH
+Info: # -- Compiling module stratixiv_dffe
+Info: # -- Compiling module stratixiv_mux21
+Info: # -- Compiling module stratixiv_mux41
+Info: # -- Compiling module stratixiv_and1
+Info: # -- Compiling module stratixiv_and16
+Info: # -- Compiling module stratixiv_bmux21
+Info: # -- Compiling module stratixiv_b17mux21
+Info: # -- Compiling module stratixiv_nmux21
+Info: # -- Compiling module stratixiv_b5mux21
+Info: # -- Compiling module stratixiv_jtag
+Info: # -- Compiling module stratixiv_crcblock
+Info: # -- Compiling module stratixiv_lcell_comb
+Info: # -- Compiling module stratixiv_routing_wire
+Info: # -- Compiling module stratixiv_lvds_tx_reg
+Info: # -- Compiling module stratixiv_lvds_tx_parallel_register
+Info: # -- Compiling module stratixiv_lvds_tx_out_block
+Info: # -- Compiling module stratixiv_lvds_transmitter
+Info: # -- Compiling module stratixiv_rublock
+Info: # -- Compiling module stratixiv_ram_pulse_generator
+Info: # -- Compiling module stratixiv_ram_register
+Info: # -- Compiling module stratixiv_ram_block
+Info: # -- Compiling module stratixiv_ff
+Info: # -- Compiling module stratixiv_clkselect
+Info: # -- Compiling module stratixiv_and2
+Info: # -- Compiling module stratixiv_ena_reg
+Info: # -- Compiling module stratixiv_clkena
+Info: # -- Compiling module stratixiv_mlab_cell_pulse_generator
+Info: # -- Compiling module stratixiv_mlab_cell
+Info: # -- Compiling module stratixiv_io_ibuf
+Info: # -- Compiling module stratixiv_io_obuf
+Info: # -- Compiling module stratixiv_ddio_out
+Info: # -- Compiling module stratixiv_ddio_oe
+Info: # -- Compiling module stratixiv_ddio_in
+Info: # -- Compiling module stratixiv_mac_register
+Info: # -- Compiling module stratixiv_mac_multiplier
+Info: # -- Compiling module stratixiv_mac_mult
+Info: # -- Compiling module stratixiv_fsa_isse
+Info: # -- Compiling module stratixiv_first_stage_add_sub
+Info: # -- Compiling module stratixiv_second_stage_add_accum
+Info: # -- Compiling module stratixiv_round_block
+Info: # -- Compiling module stratixiv_saturate_block
+Info: # -- Compiling module stratixiv_round_saturate_block
+Info: # -- Compiling module stratixiv_rotate_shift_block
+Info: # -- Compiling module stratixiv_carry_chain_adder
+Info: # -- Compiling module stratixiv_mac_out
+Info: # -- Compiling module stratixiv_ddr_gray_decoder
+Info: # -- Compiling module stratixiv_ddr_delay_chain_s
+Info: # -- Compiling module stratixiv_ddr_io_reg
+Info: # -- Compiling module stratixiv_dll
+Info: # -- Compiling module stratixiv_dll_offset_ctrl
+Info: # -- Compiling module stratixiv_dqs_delay_chain
+Info: # -- Compiling module stratixiv_dqs_enable
+Info: # -- Compiling module stratixiv_dqs_enable_ctrl
+Info: # -- Compiling module stratixiv_delay_chain
+Info: # -- Compiling module stratixiv_io_clock_divider
+Info: # -- Compiling module stratixiv_output_phase_alignment
+Info: # -- Compiling module stratixiv_input_phase_alignment
+Info: # -- Compiling module stratixiv_half_rate_input
+Info: # -- Compiling module stratixiv_io_config
+Info: # -- Compiling module stratixiv_dqs_config
+Info: # -- Compiling module stratixiv_rt_sm
+Info: # -- Compiling module stratixiv_termination_aux_clock_div
+Info: # -- Compiling module stratixiv_termination
+Info: # -- Compiling module stratixiv_termination_logic
+Info: # -- Compiling module stratixiv_io_pad
+Info: # -- Compiling module stratixiv_m_cntr
+Info: # -- Compiling module stratixiv_n_cntr
+Info: # -- Compiling module stratixiv_scale_cntr
+Info: # -- Compiling module stratixiv_pll_reg
+Info: # -- Compiling module stratixiv_pll
+Info: # -- Compiling module stratixiv_asmiblock
+Info: # -- Compiling module stratixiv_tsdblock
+Info: # -- Compiling module stratixiv_lvds_rx_fifo_sync_ram
+Info: # -- Compiling module stratixiv_lvds_rx_fifo
+Info: # -- Compiling module stratixiv_lvds_rx_bitslip
+Info: # -- Compiling module stratixiv_lvds_rx_deser
+Info: # -- Compiling module stratixiv_lvds_rx_parallel_reg
+Info: # -- Compiling module stratixiv_lvds_reg
+Info: # -- Compiling module stratixiv_pclk_divider
+Info: # -- Compiling module stratixiv_select_ini_phase_dpaclk
+Info: # -- Compiling module stratixiv_dpa_retime_block
+Info: # -- Compiling module stratixiv_dpa_block
+Info: # -- Compiling module stratixiv_lvds_receiver
+Info: # -- Compiling module stratixiv_pseudo_diff_out
+Info: # -- Compiling module stratixiv_bias_logic
+Info: # -- Compiling module stratixiv_bias_generator
+Info: # -- Compiling module stratixiv_bias_block
+Info: # 
+Info: # Top level modules:
+Info: # 	stratixiv_dffe
+Info: # 	stratixiv_and1
+Info: # 	stratixiv_and16
+Info: # 	stratixiv_bmux21
+Info: # 	stratixiv_b17mux21
+Info: # 	stratixiv_nmux21
+Info: # 	stratixiv_b5mux21
+Info: # 	stratixiv_jtag
+Info: # 	stratixiv_crcblock
+Info: # 	stratixiv_lcell_comb
+Info: # 	stratixiv_routing_wire
+Info: # 	stratixiv_lvds_transmitter
+Info: # 	stratixiv_rublock
+Info: # 	stratixiv_ram_block
+Info: # 	stratixiv_ff
+Info: # 	stratixiv_clkselect
+Info: # 	stratixiv_clkena
+Info: # 	stratixiv_mlab_cell
+Info: # 	stratixiv_io_ibuf
+Info: # 	stratixiv_io_obuf
+Info: # 	stratixiv_ddio_out
+Info: # 	stratixiv_ddio_oe
+Info: # 	stratixiv_ddio_in
+Info: # 	stratixiv_mac_mult
+Info: # 	stratixiv_mac_out
+Info: # 	stratixiv_dll
+Info: # 	stratixiv_dll_offset_ctrl
+Info: # 	stratixiv_dqs_delay_chain
+Info: # 	stratixiv_dqs_enable
+Info: # 	stratixiv_dqs_enable_ctrl
+Info: # 	stratixiv_delay_chain
+Info: # 	stratixiv_io_clock_divider
+Info: # 	stratixiv_output_phase_alignment
+Info: # 	stratixiv_input_phase_alignment
+Info: # 	stratixiv_half_rate_input
+Info: # 	stratixiv_io_config
+Info: # 	stratixiv_dqs_config
+Info: # 	stratixiv_termination
+Info: # 	stratixiv_termination_logic
+Info: # 	stratixiv_io_pad
+Info: # 	stratixiv_pll_reg
+Info: # 	stratixiv_pll
+Info: # 	stratixiv_asmiblock
+Info: # 	stratixiv_tsdblock
+Info: # 	stratixiv_lvds_receiver
+Info: # 	stratixiv_pseudo_diff_out
+Info: # 	stratixiv_bias_block
+Info: # End time: 02:01:07 on Dec 06,2025, Elapsed time: 0:00:00
+Info: # Errors: 0, Warnings: 0
+Info: Successfully compiled the libraries

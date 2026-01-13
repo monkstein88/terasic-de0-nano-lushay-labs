@@ -1,4 +1,4 @@
-// Note the time unit must be 1 [ns] for the testbench to function properly - ref. timeout safety
+// Note the time unit must be 1 [ns] for the testbench to function properly - ref. TIMEOUT WATCHDOG
 `timescale 1ns / 1ps // 
 
 module clk_counter_leds_top_tb; 
@@ -66,7 +66,7 @@ module clk_counter_leds_top_tb;
     
     // Display testbench header info
     $display("================================================================================");
-    $display("  Testbench for clk_counter_leds_top Module");
+    $display("  Testbench for 'clk_counter_leds_top' Module");
     $display("================================================================================");
     $display("  Clock Frequency:     %0d Hz", EXT_CLOCK_FREQ);
     $display("  Clock Period:        %0.3f ns", EXT_CLOCK_PERIOD);

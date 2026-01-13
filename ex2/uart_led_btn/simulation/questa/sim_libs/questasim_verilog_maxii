@@ -1,0 +1,50 @@
+Info: Changing the current directory to output directory C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex1/sim_lib ..
+Info: Using Path C:/questasim64_2024.1/win64 that was set in EDA Simulation Library Compiler Options
+Info: Generating commands to compile library maxii_ver ...
+Info: Executing command file containing library compilation commands
+Info: Reading pref.tcl
+Info: # 2024.1
+Info: # do temp_simlib_comp.tmp
+Info: # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Info: # Start time: 02:01:02 on Dec 06,2025
+Info: # vlog -work maxii_ver c:/altera/25.1std/quartus/eda/sim_lib/maxii_atoms.v 
+Info: # -- Compiling UDP MAXII_PRIM_DFFE
+Info: # -- Compiling UDP MAXII_PRIM_DFFEAS
+Info: # -- Compiling UDP MAXII_PRIM_DFFEAS_HIGH
+Info: # -- Compiling module maxii_dffe
+Info: # -- Compiling module maxii_mux21
+Info: # -- Compiling module maxii_mux41
+Info: # -- Compiling module maxii_and1
+Info: # -- Compiling module maxii_and16
+Info: # -- Compiling module maxii_bmux21
+Info: # -- Compiling module maxii_b17mux21
+Info: # -- Compiling module maxii_nmux21
+Info: # -- Compiling module maxii_b5mux21
+Info: # -- Compiling module maxii_jtag
+Info: # -- Compiling module maxii_crcblock
+Info: # -- Compiling module maxii_asynch_lcell
+Info: # -- Compiling module maxii_lcell_register
+Info: # -- Compiling module maxii_lcell
+Info: # -- Compiling module maxii_ufm
+Info: # -- Compiling module maxii_io
+Info: # -- Compiling module maxii_routing_wire
+Info: # 
+Info: # Top level modules:
+Info: # 	maxii_dffe
+Info: # 	maxii_mux21
+Info: # 	maxii_mux41
+Info: # 	maxii_and1
+Info: # 	maxii_and16
+Info: # 	maxii_bmux21
+Info: # 	maxii_b17mux21
+Info: # 	maxii_nmux21
+Info: # 	maxii_b5mux21
+Info: # 	maxii_jtag
+Info: # 	maxii_crcblock
+Info: # 	maxii_lcell
+Info: # 	maxii_ufm
+Info: # 	maxii_io
+Info: # 	maxii_routing_wire
+Info: # End time: 02:01:02 on Dec 06,2025, Elapsed time: 0:00:00
+Info: # Errors: 0, Warnings: 0
+Info: Successfully compiled the libraries

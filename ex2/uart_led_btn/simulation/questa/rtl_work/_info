@@ -1,0 +1,156 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/simulation/questa
+T_opt
+!s110 1768152509
+VWCcc]8DAF2kMD>[kAYnM:1
+04 13 4 work reset_sync_tb fast 0
+=1-b44506c67a11-6963ddbd-10c-6f04
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work -L rtl_work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.1;79
+vdebounce
+Z3 2../../hdl/debounce.sv|../../hdl/design_top.sv|../../hdl/reset_sync.sv|../../hdl/uart_com.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1768152508
+!i10b 1
+!s100 UA6FnSUnbEXcnDENkTQ131
+I_MbU<DmLSGTg]FDBJ=>Z<3
+S1
+R1
+w1768148909
+8../../hdl/debounce.sv
+F../../hdl/debounce.sv
+!i122 0
+L0 1 44
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.1;79
+r1
+!s85 0
+31
+Z8 !s108 1768152508.000000
+Z9 !s107 ../../hdl/uart_com.sv|../../hdl/reset_sync.sv|../../hdl/design_top.sv|../../hdl/debounce.sv|
+Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl/|../../hdl/debounce.sv|../../hdl/design_top.sv|../../hdl/reset_sync.sv|../../hdl/uart_com.sv|
+!i113 0
+Z11 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 -sv -work work +incdir+../../hdl/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdesign_top
+R3
+R4
+R5
+!i10b 1
+!s100 5j2>KT3k1=O59_2So;zK_0
+IW=X4PPo2F9I==`XaNTQ6@3
+S1
+R1
+w1768148998
+8../../hdl/design_top.sv
+F../../hdl/design_top.sv
+!i122 0
+L0 1 66
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vreset_sync
+R3
+R4
+R5
+!i10b 1
+!s100 m;Rn3]mY<n@<J`d<YOBmA0
+I55zR>G9<o]zc0E[mFVW9B0
+S1
+R1
+w1768148932
+8../../hdl/reset_sync.sv
+F../../hdl/reset_sync.sv
+!i122 0
+L0 8 38
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vreset_sync_tb
+2../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv
+R4
+R5
+!i10b 1
+!s100 d8lDMzZY0kA7kQCHl6hZR2
+I;oS299gf6_lznDZ0S<Xl10
+S1
+R1
+w1768150766
+8../../hdl_tb/reset_sync_tb.sv
+F../../hdl_tb/reset_sync_tb.sv
+!i122 1
+L0 4 91
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 ../../hdl_tb/reset_sync_tb.sv|../../hdl_tb/design_top_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl_tb/|../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv|
+!i113 0
+R11
+!s92 -sv -work work +incdir+../../hdl_tb/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vuart_com
+R3
+R4
+R5
+!i10b 1
+!s100 gf^MVU]o_z5CgV;]HMcA`3
+IeP41^IO=O8A7eBGiFoLkd0
+S1
+R1
+w1768149023
+8../../hdl/uart_com.sv
+F../../hdl/uart_com.sv
+!i122 0
+L0 3 152
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2

@@ -1,0 +1,50 @@
+Info: Changing the current directory to output directory C:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/Lushay-Labs-DE0-NANO/ex1/sim_lib ..
+Info: Using Path C:/questasim64_2024.1/win64 that was set in EDA Simulation Library Compiler Options
+Info: Generating commands to compile library maxv_ver ...
+Info: Executing command file containing library compilation commands
+Info: Reading pref.tcl
+Info: # 2024.1
+Info: # do temp_simlib_comp.tmp
+Info: # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+Info: # Start time: 02:01:04 on Dec 06,2025
+Info: # vlog -work maxv_ver c:/altera/25.1std/quartus/eda/sim_lib/maxv_atoms.v 
+Info: # -- Compiling UDP MAXV_PRIM_DFFE
+Info: # -- Compiling UDP MAXV_PRIM_DFFEAS
+Info: # -- Compiling UDP MAXV_PRIM_DFFEAS_HIGH
+Info: # -- Compiling module maxv_dffe
+Info: # -- Compiling module maxv_mux21
+Info: # -- Compiling module maxv_mux41
+Info: # -- Compiling module maxv_and1
+Info: # -- Compiling module maxv_and16
+Info: # -- Compiling module maxv_bmux21
+Info: # -- Compiling module maxv_b17mux21
+Info: # -- Compiling module maxv_nmux21
+Info: # -- Compiling module maxv_b5mux21
+Info: # -- Compiling module maxv_jtag
+Info: # -- Compiling module maxv_crcblock
+Info: # -- Compiling module maxv_asynch_lcell
+Info: # -- Compiling module maxv_lcell_register
+Info: # -- Compiling module maxv_lcell
+Info: # -- Compiling module maxv_ufm
+Info: # -- Compiling module maxv_io
+Info: # -- Compiling module maxv_routing_wire
+Info: # 
+Info: # Top level modules:
+Info: # 	maxv_dffe
+Info: # 	maxv_mux21
+Info: # 	maxv_mux41
+Info: # 	maxv_and1
+Info: # 	maxv_and16
+Info: # 	maxv_bmux21
+Info: # 	maxv_b17mux21
+Info: # 	maxv_nmux21
+Info: # 	maxv_b5mux21
+Info: # 	maxv_jtag
+Info: # 	maxv_crcblock
+Info: # 	maxv_lcell
+Info: # 	maxv_ufm
+Info: # 	maxv_io
+Info: # 	maxv_routing_wire
+Info: # End time: 02:01:04 on Dec 06,2025, Elapsed time: 0:00:00
+Info: # Errors: 0, Warnings: 0
+Info: Successfully compiled the libraries
