@@ -21,6 +21,7 @@ module reset_sync_tb;
   logic async_rst;        // Asynchronous reset input 
   logic synced_rst;       // Synchronized reset output
 
+  integer unsigned fail_count = 0; // Test fail counter
   // =============================================================================
   // CLOCK GENERATION
   // =============================================================================
@@ -46,75 +47,143 @@ module reset_sync_tb;
   // =============================================================================
   initial begin
     // Display testbench header information
-    $display("===============================================");
-    $display("RESET SYNCHRONIZER TESTBENCH - 'reset_sync_tb'");
+    $display("============================");
+    $display("Reset Synchronizer Testbench");
+    $display("============================");
     $display("Clock Frequency: %0d Hz", CLOCK_FREQ);    
     $display("Clock Period: %0d ns", CLOCK_PERIOD);
     $display("Reset Polarity: %s", RESET_POLARITY);
     $display("Synchronization Stages: %0d", SYNC_STAGES);
-    $display("===============================================");
+    $display("===========================");
 
-    // Initialize signals - set async_rst to inactive (deasserted) state
-    async_rst = (RESET_POLARITY == "LOW") ? 1'b1 : 1'b0; // Set to inactive state
-    // Check immediate state of synced_rst (note: it undefined at time 0) :  
-    $display("Time: %0t ns | Initial (immediate) value of 'synced_rst': %b", $time, synced_rst);
-    // Check the state of synced_rst after 1st clock edge:
-    @(posedge clk); 
-    $display("Time: %0t ns | 'synced_rst' value at 1st clock: %b", $time, synced_rst);
-    // Check the state of synced_rst after SYNC_STAGES clock edges, to allow reset synchronization to settle:
-    repeat (SYNC_STAGES-1) @(posedge clk); // Note: already waited for 1 clock above, thus SYNC_STAGES-1 here
-    $display("Time: %0t ns | 'synced_rst' value at '#SYNC_STAGES' clocks: %b", $time, synced_rst);  // At this point, still 'synced_rst' should be still asserted
-    if (RESET_POLARITY == "LOW") begin
-      if (synced_rst !== 1'b0) begin
-        $display("ERROR: 'synced_rst' should be asserted (0) at '#SYNC_STAGES' clocks when reset is active low!");
-      end else begin
-        $display("SUCCESS: 'synced_rst' is correctly asserted (0) at '#SYNC_STAGES' clocks, when reset is active low!");
-      end
-    end else begin
-      if (synced_rst !== 1'b1) begin
-        $display("ERROR: 'synced_rst' should be asserted (1) at '#SYNC_STAGES' clocks, when reset is active high!");
-      end else begin
-        $display("SUCCESS: 'synced_rst' is correctly asserted (1) at '#SYNC_STAGES' clocks, when reset is active high!");
+    $display("=== Initializing signals: ===");
+    async_rst = (RESET_POLARITY == "HIGH") ? 1'b0 : 1'b1; // Deassert reset based on polarity
+    $display("  Time: %0t [ns] | 'async_rst' input initialized to %b (deasserted), 'synced_rst' output is %b", $time, async_rst, synced_rst);
+
+    $display("=== Starting Test Sequence: ===");
+
+    // Test 1: Observing 'synced_rst' over (SYNC_STAGES+1) clock cycles after initialization
+    $display("Test 1: Observing 'synced_rst' behaviour - over %0d (SYNC_STAGES+1) clock cycles after initialization", SYNC_STAGES+1); 
+    $display("  Time: %0t [ns] | 'async_rst' is deasserted", $time);
+    #1; // Small delay to ensure initialization is registered
+    $display("  Time: %0t [ns] | 'synced_rst' shortly after initialization: %b (should be deasserted)", $time, synced_rst);
+    for(int i = 1; i <= (SYNC_STAGES + 1); i++)begin
+      @(posedge clk);
+      $display("  Time: %0t [ns] | Clock: %0d after initialization | 'synced_rst': %b", $time, i, synced_rst);
+      if (synced_rst !== ((RESET_POLARITY == "HIGH") ? 1'b0 : 1'b1)) begin
+        $display("    ERROR: 'synced_rst' is not deasserted as expected!");
+        fail_count++;
       end
     end
-    #1 ; // Put small delay to check the value after the clock edge
-    $display("Time: %0t ns | 'synced_rst' value just #1 after '#SYNC_STAGES' clocks: %b", $time, synced_rst); // Just after the clock edge, 'synced_rst' should be deasserted
-    if(RESET_POLARITY == "LOW") begin
-      if (synced_rst !== 1'b0) begin
-        $display("ERROR: 'synced_rst' should be still asserted (0) just after '#SYNC_STAGES' clocks when reset is active low!");
-      end else begin
-        $display("SUCCESS: 'synced_rst' is correctly still asserted (0) just after '#SYNC_STAGES' clocks, when reset is active low!");
-      end
+    if (fail_count == 0) begin
+      $display("  Test 1 PASSED: 'synced_rst' was kept deasserted during the test.");
     end else begin
-      if (synced_rst !== 1'b1) begin
-        $display("ERROR: 'synced_rst' should be still asserted (1) just after '#SYNC_STAGES' clocks, when reset is active high!");
-      end else begin
-        $display("SUCCESS: 'synced_rst' is correctly still asserted (1) just after '#SYNC_STAGES' clocks, when reset is active high!");
-      end
+      $display("  Test 1 FAILED: 'synced_rst' was not kept deasserted during the test!");
+    end
+    
+    $display("");
+    // Wait for a few clocke cycles
+    repeat(3) @(posedge clk);
+
+    // Test 2: Reset Synchronzier - check asynchronous reset (assertion) behaviour
+    $display("Test 2: Checking 'synced_rst' behaviour - for asynchronous reset");
+    fail_count = 0; // Reset fail count
+    async_rst = (RESET_POLARITY == "HIGH") ? 1'b1 : 1'b0; // Assert reset based on polarity
+    $display("  Time: %0t [ns] | 'async_rst' asserted", $time);
+    #1; // Small delay to ensure reset assertion is propagated
+    $display("  Time: %0t [ns] | 'synced_rst' shortly after 'async_rst' assertion : %b (should be asserted)", $time, synced_rst);
+    if (synced_rst !== ((RESET_POLARITY == "HIGH") ? 1'b1 : 1'b0)) begin
+      $display("    ERROR: 'synced_rst' did not assert immediately as expected!");
+      fail_count++;
+    end
+    if (fail_count == 0) begin
+      $display("  Test 2 PASSED: 'synced_rst' asserted immediately.");
+    end else begin
+      $display("  Test 2 FAILED: 'synced_rst' did not assert immediately!");
     end
 
-    // Wait for a few clock cycles
-    #(CLOCK_PERIOD * 5);
+    $display("");
+    
+    // Test 3: Reset Synchronzier - check reset output 'synced_rst' is kept asserted over multiple clock cycles, if the 'async_rst' is still held asserted
+    $display("Test 3: Checking 'synced_rst' behaviour - keeping the reset asserted over multiple clock cycles");
+    fail_count = 0; // Reset fail count
+    for(int i = 1; i<= (SYNC_STAGES + 2); i++) begin
+      @(posedge clk);
+      $display("  Time: %0t [ns] | Clock: %0d while 'async_rst' is asserted | 'synced_rst': %b", $time, i, synced_rst);
+      if (synced_rst !== ((RESET_POLARITY == "HIGH") ? 1'b1 : 1'b0)) begin
+        $display("    ERROR: 'synced_rst' is not kept asserted as expected!");
+        fail_count++;
+      end
+    end
+    if (fail_count == 0) begin
+      $display("  Test 3 PASSED: 'synced_rst' was kept asserted.");
+    end else begin
+      $display("  Test 3 FAILED: 'synced_rst' was not kept asserted during the test!");
+    end
+  
+    $display("");
+    // Wait for a few clocke cycles
+    repeat(3) @(posedge clk);
 
-    // Assert reset
-    async_rst = (RESET_POLARITY == "LOW") ? 1'b0 : 1'b1;
-    #(CLOCK_PERIOD * 5);
+    // Test 4: Reset Synchronzier - check synchronous reset (deassertion) behaviour
+    $display("Test 4: Checking 'synced_rst' behaviour - for synchronous reset deassertion");
+    fail_count = 0; // Reset fail count
+    async_rst = (RESET_POLARITY == "HIGH") ? 1'b0 : 1'b1; // Deassert reset based on polarity
+    $display("  Time: %0t [ns] | 'async_rst' deasserted", $time);
+    #1; // Small delay to ensure reset deassertion is propagated
+    $display("  Time: %0t [ns] | 'synced_rst' shortly after 'async_rst' deassertion : %b (should be asserted still)", $time, synced_rst);
+    // Observe 'synced_rst' over SYNC_STAGES clock cycles
+    for(int i = 1; i <= (SYNC_STAGES); i++) begin  
+      @(posedge clk);
+      $display("  Time: %0t [ns] | Clock: %0d after 'async_rst' deassertion | 'synced_rst': %b (expected to stay asserted)", $time, i, synced_rst);
+      if (synced_rst !== ((RESET_POLARITY == "HIGH") ? 1'b1 : 1'b0)) begin
+        $display("    ERROR: 'synced_rst' did not deassert as expected - deassertion too soon!");
+        fail_count++;
+      end
+    end
+    @(posedge clk);    // Final check after SYNC_STAGES cycles -  One more clock cycle
+    $display("  Time: %0t [ns] | Clock: %0d (SYNC_STAGES + 1) after 'async_rst' deassertion | 'synced_rst': %b (expected to be deasserted now)", $time, i, synced_rst);
+    if (synced_rst !== ((RESET_POLARITY == "HIGH") ? 1'b0 : 1'b1)) begin
+      $display("    ERROR: 'synced_rst' did not deassert as expected after SYNC_STAGES cycles!");
+      fail_count++;
+    end
+    if (fail_count == 0) begin
+      $display("  Test 4 PASSED: 'synced_rst' deasserted correctly after SYNC_STAGES cycles.");
+    end else begin
+      $display("  Test 4 FAILED: 'synced_rst' did not deassert correctly!");
+    end
 
-    // Deassert reset
-    async_rst = (RESET_POLARITY == "LOW") ? 1'b1 : 1'b0;
+    $display("");
+    // Wait for a few clocke cycles
+    repeat(3) @(posedge clk);
 
-    // Wait for some time to observe synchronized reset deassertion
-    #(CLOCK_PERIOD * 20);
-
-    // Finish simulation
+    // Test 5: Reset Synchonizer - Metastability test, asserting reset near clock edge
+    $display("Test 5: Checking 'synced_rst' behaviour - Metastability issues");
+    fail_count = 0; // Reset fail count
+    @(posedge clk);
+    $display("  Time: %0t [ns] | Keeping 'async_rst' asserted, till, close to clock edge", $time);
+    async_rst = (RESET_POLARITY == "HIGH") ? 1'b1 : 1'b0; // Keep the reset asserted, till ...
+    #(CLOCK_PERIOD - 0.5); //  ... right before (very close to) the clock edge, and then ...
+    $display("  Time: %0t [ns] | Deasserting 'async_rst' shortly before the clock edge", $time);
+    async_rst = (RESET_POLARITY == "HIGH") ? 1'b0 : 1'b1; //  ...deassert the reset input. All based on polarity.
+    #1; // wait a small amount
+    $display("  Time: %0t [ns] | Reset 'async_rst' toggled close around the clock edge", $time);
+    for(int i = 1; i <= SYNC_STAGES; i++) begin 
+      @(posedge clk);
+      $display("  Time: %0t [ns] | Clock: %0d after 'async_rst' deassertion | 'synced_rst': %b (expected to stay asserted)", $time, i, synced_rst);
+      if (synced_rst !== ((RESET_POLARITY == "HIGH") ? 1'b1 : 1'b0)) begin
+        $display("    ERROR: 'synced_rst' did not deassert as expected - deassertion too soon!");
+        fail_count++;
+      end
+    end
+    
+    
+    
+    
+    
+    $display("=== Test Sequence Completed! ===");
     $finish;
   end
-
-  task check_reset_behavior;
-
-
-
-  endtask
 
 
 endmodule

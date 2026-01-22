@@ -14,11 +14,11 @@ module reset_sync #(
   output logic synced_rst_o   // Synchronized reset output
 );
 
-// Internal signals:
-logic [0:SYNC_STAGES-1] sync_ff = '0; // Synchronizer flip-flops . Note: Bit 0 is the last stage (MSb), Bit SYNC_STAGES-1 is the first stage (LSb)  
+
 // Conditional hdl generation:
 generate 
   if(RESET_POLARITY == "HIGH") begin : GEN_SYNC_ACTIVE_HIGH // If the reset is active-high
+    logic [0:SYNC_STAGES-1] sync_ff = '1; // Synchronizer flip-flops. Note: Bit 0 is the last stage (MSb), Bit SYNC_STAGES-1 is the first stage (LSb). So no matter the number of stages, the last stage (synced) output is always sync_ff[0].
     always_ff @(posedge async_rst_i, posedge clk_i) begin 
       if(async_rst_i != 1'b0) begin  // Asynchronous part - assert reset
         sync_ff <= '1;
@@ -27,6 +27,7 @@ generate
       end
     end
   end else if(RESET_POLARITY == "LOW") begin : GEN_SYNC_ACTIVE_LOW // If the reset is active-low
+    logic [0:SYNC_STAGES-1] sync_ff = '0; // Synchronizer flip-flops. Note: Bit 0 is the last stage (MSb), Bit SYNC_STAGES-1 is the first stage (LSb). So no matter the number of stages, the last stage (synced) output is always sync_ff[0].
     always_ff @(negedge async_rst_i, posedge clk_i) begin
       if(async_rst_i != 1'b1) begin // Asynchronous part - assert reset
         sync_ff <= '0; 
@@ -36,6 +37,7 @@ generate
     end
   end else begin : GEN_SYNC_DEFAULT // If the reset is not specified accordingly, indicate a fatal error! Also fall to default behaviour - just pass it through (directly) 
     $fatal("ERROR in 'reset_sync': Invalid RESET_POLARITY parameter value! Supported values are: 'HIGH' and 'LOW'.");
+    logic [0:SYNC_STAGES-1] sync_ff;
     assign sync_ff[0] = async_rst_i; // Directly pass through the async reset input to the output
   end
 endgenerate 

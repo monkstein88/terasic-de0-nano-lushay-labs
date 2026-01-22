@@ -17,8 +17,8 @@ wire arst_n; // Asynchronous reset (active low) - synchronized (filtered) versio
 wire btn_n; // Debounced User button (active low) - this will be used to control the UART transmission, sending an ASCII character when pressed
 
 logic uart_rx_ready = 1'b0; // UART received data ready flag
-logic [7:0] uart_rx_data = '0; // Buffer to hold the received UART data
-logic uart_tx_busy = 1'b0; // UART transmit busy flag
+logic [7:0] uart_rx_data; // Buffer to hold the received UART data
+logic uart_tx_busy; // UART transmit busy flag
 logic uart_tx_start = 1'b0; // UART transmit start signal
 logic [7:0] uart_tx_data = 8'h41; // Data to send via UART - default to ASCII character 'A' (0x41) and increment on each button press
 

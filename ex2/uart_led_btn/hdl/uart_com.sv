@@ -40,14 +40,14 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
     case(uart_rx_fsm)
       UART_RX_STATE_IDLE: begin 
         rx_ready_o <= 1'b0; // Clear the data ready flag immediately when in IDLE state
-        if(uart_rx_i == 1'b0) begin 
+        if(uart_rx_i == 1'b0) begin // Start bit detected (line went low) - go to START_BIT state
           rx_clk_counter = 0;
           uart_rx_fsm <= UART_RX_STATE_START_BIT;
         end
       end 
       UART_RX_STATE_START_BIT: begin 
-        if(rx_clk_counter == UART_HALF_BIT_TIME - 1) begin   
-          rx_clk_counter <= 0;
+        if(rx_clk_counter == UART_HALF_BIT_TIME - 1) begin // wait for half bit time, in the middle of the start bit
+          rx_clk_counter <= 0; 
           rx_bit_counter <= 0;
           uart_rx_fsm <= UART_RX_STATE_WAIT;
         end else begin 
@@ -55,7 +55,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
         end
       end
       UART_RX_STATE_WAIT: begin 
-        if(rx_clk_counter == UART_BIT_TIME - 1) begin  
+        if(rx_clk_counter == UART_BIT_TIME - 1) begin // wait for full bit time, then ... 
           rx_clk_counter <= 0;
           uart_rx_fsm <= UART_RX_STATE_READ_BIT;
         end else begin 
@@ -63,7 +63,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
         end
       end
       UART_RX_STATE_READ_BIT: begin
-        rx_data_buf[rx_bit_counter] <= uart_rx_i; 
+        rx_data_buf[rx_bit_counter] <= uart_rx_i; // ... Sample the data bit (LSb -> MSb)
         if(rx_bit_counter == UART_DATA_BITS - 1) begin
           rx_bit_counter++; 
           uart_rx_fsm <= UART_RX_STATE_WAIT;
