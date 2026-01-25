@@ -6,8 +6,8 @@
   * to accurately measure the recovery and removal timing to the sytem flops. 
   */
 module reset_sync #(
-  parameter RESET_POLARITY = 1'b0, // Reset polarity: "1'b1" for active high reset, "1'b0" for active low reset. Default is active low.
-  parameter SYNC_STAGES = 2 // Number of synchronization stages. Expected values are 2 or more.
+  parameter logic RESET_POLARITY = 1'b0, // Reset polarity: "1'b1" for active high reset, "1'b0" for active low reset. Default is active low.
+  parameter integer SYNC_STAGES = 2 // Number of synchronization stages. Expected values are 2 or more.
 )(
   input  wire  async_rst_i,   // Asynchronous reset input
   input  wire  clk_i,         // Clock input

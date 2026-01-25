@@ -9,7 +9,7 @@ module debounce_tb;
   // Testbench parameters - matching DUT's:
   localparam CLK_FREQ = 50_000_000; // External Clock source, in [Hz]
   localparam CLK_PERIOD = 20;       // External Clock source, in [ns]
-  localparam DEBOUNCE_TIME = 1;     // Debounce (Filter) time in [ms]
+  localparam DEBOUNCE_TIME = 0.001;     // Debounce (Filter) time in [ms]
   // Testbench parameters - for simulation:
   localparam MAX_SIMULATION_TIME = 100_000_000; // Simulation time in [ns]
   localparam DEBOUNCE_CYCLES = (CLK_FREQ / 1000) * DEBOUNCE_TIME;
@@ -76,191 +76,194 @@ module debounce_tb;
   
   // Task to apply glitches (brief pulses)
   task apply_glitch(input logic value, input int duration_cycles);
-    din = value;
+    din_i = value;
     wait_cycles(duration_cycles);
-    din = ~value;
+    din_i = ~value;
   endtask
   
   // Task to check expected output
   task check_output(input logic expected_for_high, input logic expected_for_low, input string test_name);
-    if (deb_o_high !== expected_for_high) || (deb_o_low !== expected_for_low) begin
+    if((deb_o_high !== expected_for_high) || (deb_o_low !== expected_for_low)) begin
       $display("ERROR [%0t ns] %s: Expected deb_o_high=%b, deb_o_low=%b, got deb_o_high=%b, deb_o_low=%b", 
                $time, test_name, expected_for_high, expected_for_low, deb_o_high, deb_o_low);
-      errors++;
+      fail_count++;
     end else begin
       $display("PASS [%0t ns] %s: deb_o_high=%b and deb_o_low=%b as expected", 
                $time, test_name, deb_o_high, deb_o_low);
+      pass_count++;
     end
   endtask
 
   // =============================================================================
   // TEST SEQUENCE
   // =============================================================================
-  // Display testbench header information
-  $display("========================================");
-  $display("Debouncer Testbench Starting...");
-  $display("========================================");
-  $display("Clock Frequency: %0d [Hz]", CLK_FREQ);    
-  $display("Clock Period: %0d [ns]", CLK_PERIOD);
-  $display("Debounce Init Values: %s", "Both LOW and HIGH");
-  $display("Debounce Time: %0d [ms]", DEBOUNCE_TIME);
-  $display("");
+  // Main test sequence
+  initial begin  
+    // Display testbench header information
+    $display("========================================");
+    $display("Debouncer Testbench Starting...");
+    $display("========================================");
+    $display("Clock Frequency: %0d [Hz]", CLK_FREQ);    
+    $display("Clock Period: %0d [ns]", CLK_PERIOD);
+    $display("Debounce Init Values: %s", "Both LOW and HIGH");
+    $display("Debounce Time: %0d [ms]", DEBOUNCE_TIME);
+    $display("");
 
-  // Wait for a short time before starting tests - to observe initial conditions
-  wait_period(CLK_PERIOD * 5); 
+    // Wait for a short time before starting tests - to observe initial conditions
+    wait_period(CLK_PERIOD * 5); 
 
-  // Initialize signals
-  arst_n_i = 1'b1; // Assert reset
-  din_i = 1'b0;    // Initial input value
+    // Initialize signals
+    arst_n_i = 1'b1; // Assert reset
+    din_i = 1'b0;    // Initial input value
 
-  wait_cycles(10); // Wait for a few clock cycles
+    wait_cycles(10); // Wait for a few clock cycles
 
-  // Test 1: Apply reset
-  test_num++;
-  $display("\n--- Test %0d: Reset Test ---", test_num);
-  arst_n_i = 0;
-  wait_cycles(5);
-  check_output(1'b1, 1'b0, "Reset state"); // Reset values are asserted immediately.
-  arst_n_i = 1; // Release reset
-  wait_cycles(5); 
-  check_output(1'b1, 1'b0, "After reset release"); // Should remain at initial values, still.
-
-  // Test 2: Short glitches should be filtered out
-  test_num++;
-  $display("\n--- Test %0d: Glitch Filtering (short pulses) ---", test_num);
-  din_i = 0;
-  wait_cycles(10);
-  
-  // Apply several short glitches
-  for (int i = 0; i < 5; i++) begin
-    apply_glitch(1'b1, 3); // 3-cycle glitch
+    // Test 1: Apply reset
+    test_count++;
+    $display("\n--- Test %0d: Reset Test ---", test_count);
+    arst_n_i = 0;
     wait_cycles(5);
-  end
-  wait_cycles(10);
-  check_output(1'b0, 1'b0, "After short glitches");
-  
-  // Test 3: Stable transition from 0 to 1
-  test_num++;
-  $display("\n--- Test %0d: Clean Transition 0->1 ---", test_num);
-  din = 0;
-  wait_cycles(10);
-  din = 1;
-  
-  // Should still be 0 before debounce completes
-  wait_cycles(DEBOUNCE_CYCLES - 5);
-  check_output(1'b0, 1'b0, "Before debounce complete");
-  
-  // Wait for debounce to complete
-  wait_cycles(10);
-  check_output(1'b1, 1'b1, "After debounce complete");
-  
-  // Test 4: Glitches during debouncing should restart counter
-  test_num++;
-  $display("\n--- Test %0d: Glitch During Debounce ---", test_num);
-  din = 1;
-  wait_cycles(10);
-  din = 0; // Start transition to 0
-  
-  // Midway through debounce, apply a glitch
-  wait_cycles(DEBOUNCE_CYCLES / 2);
-  din = 1; // Glitch back to 1
-  wait_cycles(5);
-  din = 0; // Back to 0 (counter should restart)
-  
-  // Output should still be 1
-  wait_cycles(DEBOUNCE_CYCLES - 10);
-  check_output(1'b1, 1'b1, "Glitch restarted counter");
-  
-  // Now wait full debounce time
-  wait_cycles(20);
-  check_output(1'b0, 1'b0, "After full debounce from glitch");
-  
-  // Test 5: Stable transition from 1 to 0
-  test_num++;
-  $display("\n--- Test %0d: Clean Transition 1->0 ---", test_num);
-  din = 0;
-  wait_cycles(10);
-  din = 1;
-  wait_cycles(DEBOUNCE_CYCLES + 10);
-  check_output(1'b1, 1'b1, "Stable at 1");
-  
-  din = 0;
-  wait_cycles(DEBOUNCE_CYCLES + 10);
-  check_output(1'b0, 1'b0, "Transitioned to 0");
-  
-  // Test 6: Multiple rapid transitions (bouncing)
-  test_num++;
-  $display("\n--- Test %0d: Rapid Bouncing ---", test_num);
-  din = 0;
-  wait_cycles(10);
-  
-  // Simulate button bouncing
-  for (int i = 0; i < 10; i++) begin
-    din = ~din;
-    wait_cycles($urandom_range(5, 20));
-  end
-  din = 1; // Settle to 1
-  
-  wait_cycles(DEBOUNCE_CYCLES + 10);
-  check_output(1'b1, 1'b1, "After bouncing settled to 1");
-  
-  // Test 7: Reset during debouncing
-  test_num++;
-  $display("\n--- Test %0d: Reset During Debounce ---", test_num);
-  din = 1;
-  wait_cycles(10);
-  din = 0; // Start transition
-  wait_cycles(DEBOUNCE_CYCLES / 2); // Halfway through
-  
-  arst_n = 0; // Apply reset
-  wait_cycles(3);
-  check_output(1'b1, 1'b1, "During reset");
-  arst_n = 1;
-  wait_cycles(5);
-  check_output(1'b0, 1'b0, "After reset with din=0");
-  
-  // Test 8: Verify timing accuracy
-  test_num++;
-  $display("\n--- Test %0d: Timing Verification ---", test_num);
-  din = 0;
-  wait_cycles(20);
-  
-  din = 1;
-  fork
-    begin
-      wait_cycles(DEBOUNCE_CYCLES - 3);
-      if (deb_o !== 1'b0) begin
-        $display("ERROR: Output changed too early");
-        errors++;
-      end
-    end
-    begin
-      wait_cycles(DEBOUNCE_CYCLES + 5);
-      if (deb_o !== 1'b1) begin
-        $display("ERROR: Output didn't change in time");
-        errors++;
-      end else begin
-        $display("PASS: Timing accurate");
-      end
-    end
-  join
-  
-  wait_cycles(20);
-  
-  // Test Summary
-  $display("\n========================================");
-  $display("Testbench Completed. Summary: ");
-  $display("========================================");
-  $display("Total tests run: %0d", test_num);
-  if (errors == 0) begin
-    $display("Result: ALL TESTS PASSED!");
-  end else begin
-    $display("Result: %0d ERRORS DETECTED", errors);
-  end
-  $display("========================================\n");
-  
-  $finish;
+    check_output(1'b1, 1'b0, "Reset state"); // Reset values are asserted immediately.
+    arst_n_i = 1; // Release reset
+    wait_cycles(5); 
+    check_output(1'b1, 1'b0, "After reset release"); // Should remain at initial values, still.
 
+    // Test 2: Short glitches should be filtered out
+    test_count++;
+    $display("\n--- Test %0d: Glitch Filtering (short pulses) ---", test_count);
+    din_i = 0;
+    wait_cycles(10);
+    
+    // Apply several short glitches
+    for (int i = 0; i < 5; i++) begin
+      apply_glitch(1'b1, 3); // 3-cycle glitch
+      wait_cycles(5);
+    end
+    wait_cycles(10);
+    check_output(1'b0, 1'b0, "After short glitches");
+    
+    // Test 3: Stable transition from 0 to 1
+    test_count++;
+    $display("\n--- Test %0d: Clean Transition 0->1 ---", test_count);
+    din_i = 0;
+    wait_cycles(10);
+    din_i = 1;
+    
+    // Should still be 0 before debounce completes
+    wait_cycles(DEBOUNCE_CYCLES - 5);
+    check_output(1'b0, 1'b0, "Before debounce complete");
+    
+    // Wait for debounce to complete
+    wait_cycles(10);
+    check_output(1'b1, 1'b1, "After debounce complete");
+    
+    // Test 4: Glitches during debouncing should restart counter
+    test_count++;
+    $display("\n--- Test %0d: Glitch During Debounce ---", test_count);
+    din_i = 1;
+    wait_cycles(10);
+    din_i = 0; // Start transition to 0
+    
+    // Midway through debounce, apply a glitch
+    wait_cycles(DEBOUNCE_CYCLES / 2);
+    din_i = 1; // Glitch back to 1
+    wait_cycles(5);
+    din_i = 0; // Back to 0 (counter should restart)
+    
+    // Output should still be 1
+    wait_cycles(DEBOUNCE_CYCLES - 10);
+    check_output(1'b1, 1'b1, "Glitch restarted counter");
+    
+    // Now wait full debounce time
+    wait_cycles(20);
+    check_output(1'b0, 1'b0, "After full debounce from glitch");
+    
+    // Test 5: Stable transition from 1 to 0
+    test_count++;
+    $display("\n--- Test %0d: Clean Transition 1->0 ---", test_count);
+    din_i = 0;
+    wait_cycles(10);
+    din_i = 1;
+    wait_cycles(DEBOUNCE_CYCLES + 10);
+    check_output(1'b1, 1'b1, "Stable at 1");
+    
+    din_i = 0;
+    wait_cycles(DEBOUNCE_CYCLES + 10);
+    check_output(1'b0, 1'b0, "Transitioned to 0");
+    
+    // Test 6: Multiple rapid transitions (bouncing)
+    test_count++;
+    $display("\n--- Test %0d: Rapid Bouncing ---", test_count);
+    din_i = 0;
+    wait_cycles(10);
+    
+    // Simulate button bouncing
+    for (int i = 0; i < 10; i++) begin
+      din_i = ~din_i;
+      wait_cycles($urandom_range(5, 20));
+    end
+    din_i = 1; // Settle to 1
+    
+    wait_cycles(DEBOUNCE_CYCLES + 10);
+    check_output(1'b1, 1'b1, "After bouncing settled to 1");
+    
+    // Test 7: Reset during debouncing
+    test_count++;
+    $display("\n--- Test %0d: Reset During Debounce ---", test_count);
+    din_i = 1;
+    wait_cycles(10);
+    din_i = 0; // Start transition
+    wait_cycles(DEBOUNCE_CYCLES / 2); // Halfway through
+    
+    arst_n_i = 0; // Apply reset
+    wait_cycles(3);
+    check_output(1'b1, 1'b1, "During reset");
+    arst_n_i = 1;
+    wait_cycles(5);
+    check_output(1'b0, 1'b0, "After reset with din_i=0");
+    
+    // Test 8: Verify timing accuracy
+    test_count++;
+    $display("\n--- Test %0d: Timing Verification ---", test_count);
+    din_i = 0;
+    wait_cycles(20);
+    
+    din_i = 1;
+    fork
+      begin
+        wait_cycles(DEBOUNCE_CYCLES - 3);
+        if ((deb_o_high !== 1'b1) || (deb_o_low !== 1'b0)) begin
+          $display("ERROR: Output changed too early");
+          fail_count++;
+        end
+      end
+      begin
+        wait_cycles(DEBOUNCE_CYCLES + 5);
+        if ((deb_o_high !== 1'b1) || (deb_o_low !== 1'b0)) begin
+          $display("ERROR: Output didn't change in time");
+          fail_count++;
+        end else begin
+          $display("PASS: Timing accurate");
+        end
+      end
+    join
+    
+    wait_cycles(20);
+    
+    // Test Summary
+    $display("\n========================================");
+    $display("Testbench Completed. Summary: ");
+    $display("========================================");
+    $display("Total tests run: %0d", test_count);
+    if (fail_count == 0) begin
+      $display("Result: ALL TESTS PASSED!");
+    end else begin
+      $display("Result: %0d fail_count DETECTED", fail_count);
+    end
+    $display("========================================\n");
+    
+    $finish;
+  end
 
   // =============================================================================
   // WAVEFORM DUMPING 

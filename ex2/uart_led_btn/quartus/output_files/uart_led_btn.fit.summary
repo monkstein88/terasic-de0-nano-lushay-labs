@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Jan 25 01:58:33 2026
+Fitter Status : Successful - Sun Jan 25 19:47:06 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 Revision Name : uart_led_btn
 Top-level Entity Name : design_top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 182 / 22,320 ( < 1 % )
-    Total combinational functions : 180 / 22,320 ( < 1 % )
-    Dedicated logic registers : 95 / 22,320 ( < 1 % )
-Total registers : 95
+Total logic elements : 230 / 22,320 ( 1 % )
+    Total combinational functions : 212 / 22,320 ( < 1 % )
+    Dedicated logic registers : 124 / 22,320 ( < 1 % )
+Total registers : 124
 Total pins : 13 / 154 ( 8 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )

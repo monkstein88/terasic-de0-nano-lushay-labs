@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/simulation/questa
 T_opt
-!s110 1769211224
-VmOFM8MbEjQLZ[lccnVeGB2
-04 13 4 work reset_sync_tb fast 0
-=1-b44506c67a11-69740557-38c-9664
+!s110 1769363222
+V9@Rdan:3i]5kj5VI>c0^R1
+04 11 4 work debounce_tb fast 0
+=1-b44506c67a11-69765716-82-d3e8
 R0
 !s12f OEM100
 !s12b OEM100
@@ -27,43 +27,69 @@ OL;O;2024.1;79
 vdebounce
 Z3 2../../hdl/debounce.sv|../../hdl/design_top.sv|../../hdl/reset_sync.sv|../../hdl/uart_com.sv
 Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z5 !s110 1769211223
+Z5 !s110 1769363221
 !i10b 1
-!s100 UA6FnSUnbEXcnDENkTQ131
-I_MbU<DmLSGTg]FDBJ=>Z<3
+!s100 zS>PLiI2_l3Tkf>[09`Vk1
+IY2jUMfoDb?WBRWEF^ORE?1
 S1
 R1
-w1768148909
+w1769363209
 8../../hdl/debounce.sv
 F../../hdl/debounce.sv
 !i122 0
-L0 1 44
+L0 1 43
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2024.1;79
 r1
 !s85 0
 31
-Z8 !s108 1769211222.000000
+Z8 !s108 1769363221.000000
 Z9 !s107 ../../hdl/uart_com.sv|../../hdl/reset_sync.sv|../../hdl/design_top.sv|../../hdl/debounce.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl/|../../hdl/debounce.sv|../../hdl/design_top.sv|../../hdl/reset_sync.sv|../../hdl/uart_com.sv|
 !i113 0
 Z11 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z12 !s92 -sv -work work +incdir+../../hdl/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
+vdebounce_tb
+Z13 2../../hdl_tb/debounce_tb.sv|../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv
+R4
+R5
+!i10b 1
+!s100 eD5Vcgl?[HBZ;<3e2MGQd0
+IMzYXX^[DmIgL1`A;6D<m71
+S1
+R1
+w1769359751
+8../../hdl_tb/debounce_tb.sv
+F../../hdl_tb/debounce_tb.sv
+!i122 1
+L0 4 283
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z14 !s107 ../../hdl_tb/reset_sync_tb.sv|../../hdl_tb/design_top_tb.sv|../../hdl_tb/debounce_tb.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl_tb/|../../hdl_tb/debounce_tb.sv|../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv|
+!i113 0
+R11
+Z16 !s92 -sv -work work +incdir+../../hdl_tb/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 vdesign_top
 R3
 R4
 R5
 !i10b 1
-!s100 WbgLQbd6:?`>VSCa?egTl1
-IPXonWXIa9lb>Ra9HD0fm@0
+!s100 `<0?ULU[K8[Wcfj_oL19i2
+I:6VHSMZ`b?bc3iSXW8I5<2
 S1
 R1
-w1768775042
+w1769299063
 8../../hdl/design_top.sv
 F../../hdl/design_top.sv
 !i122 0
-L0 1 66
+L0 1 94
 R6
 R7
 r1
@@ -81,11 +107,11 @@ R3
 R4
 R5
 !i10b 1
-!s100 O?_7e5gcY:TFdk_9eSLWf1
-I;Bb:mf08ZZE6L<M1E63b<1
+!s100 Cbj:V81dJIPTJzS4n3L1z2
+I?Dd6D=L;o8hVHnBJUIb<M3
 S1
 R1
-w1769122894
+w1769362435
 8../../hdl/reset_sync.sv
 F../../hdl/reset_sync.sv
 !i122 0
@@ -103,45 +129,45 @@ R11
 R12
 R2
 vreset_sync_tb
-2../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv
+R13
 R4
 R5
 !i10b 1
-!s100 9ilg1WkXUcL3VV2c0CbOi3
-I93jZVPjYK_KE75hI?^EBK3
+!s100 3:>IYC8V^Pl4RV@VRjF`P0
+IL0K7Ao8_]jML91Z__NDN72
 S1
 R1
-w1769122937
+w1769272085
 8../../hdl_tb/reset_sync_tb.sv
 F../../hdl_tb/reset_sync_tb.sv
 !i122 1
-L0 4 188
+L0 4 200
 R6
 R7
 r1
 !s85 0
 31
-!s108 1769211223.000000
-!s107 ../../hdl_tb/reset_sync_tb.sv|../../hdl_tb/design_top_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl_tb/|../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv|
+R8
+R14
+R15
 !i113 0
 R11
-!s92 -sv -work work +incdir+../../hdl_tb/ -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R16
 R2
 vuart_com
 R3
 R4
 R5
 !i10b 1
-!s100 gf^MVU]o_z5CgV;]HMcA`3
-IeP41^IO=O8A7eBGiFoLkd0
+!s100 8TM=3WX5eVkTBilBI:L<J2
+IQXHZP=i:8HD7V<iN5E=EM1
 S1
 R1
-w1768775084
+w1769362278
 8../../hdl/uart_com.sv
 F../../hdl/uart_com.sv
 !i122 0
-L0 3 152
+L0 3 153
 R6
 R7
 r1

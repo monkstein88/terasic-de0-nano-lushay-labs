@@ -41,7 +41,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
       UART_RX_STATE_IDLE: begin 
         rx_ready_o <= 1'b0; // Clear the data ready flag immediately when in IDLE state
         if(uart_rx_i == 1'b0) begin // Start bit detected (line went low) - go to START_BIT state
-          rx_clk_counter = 0;
+          rx_clk_counter <= 0;
           uart_rx_fsm <= UART_RX_STATE_START_BIT;
         end
       end 
@@ -51,7 +51,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
           rx_bit_counter <= 0;
           uart_rx_fsm <= UART_RX_STATE_WAIT;
         end else begin 
-          rx_clk_counter++;
+          rx_clk_counter <= rx_clk_counter + 1'b1;
         end
       end
       UART_RX_STATE_WAIT: begin 
@@ -59,25 +59,26 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
           rx_clk_counter <= 0;
           uart_rx_fsm <= UART_RX_STATE_READ_BIT;
         end else begin 
-          rx_clk_counter++;
+          rx_clk_counter <= rx_clk_counter + 1'b1;
         end
       end
       UART_RX_STATE_READ_BIT: begin
         rx_data_buf[rx_bit_counter] <= uart_rx_i; // ... Sample the data bit (LSb -> MSb)
         if(rx_bit_counter == UART_DATA_BITS - 1) begin
-          rx_bit_counter++; 
-          uart_rx_fsm <= UART_RX_STATE_WAIT;
-        end else begin
           uart_rx_fsm <= UART_RX_STATE_STOP_BIT;
+        end else begin
+          rx_bit_counter <= rx_bit_counter + 1'b1; 
+          uart_rx_fsm <= UART_RX_STATE_WAIT;
         end
       end
       UART_RX_STATE_STOP_BIT:  begin 
         if(rx_clk_counter == UART_BIT_TIME - 1) begin 
           rx_data_o <= rx_data_buf;
           rx_ready_o <= 1'b1; // Indicate that new data is ready, after the full byte has been received. Note: this flag will be cleared when going back to IDLE state
-          uart_rx_fsm <= UART_RX_STATE_IDLE;
+          if(uart_rx_i == 1'b1) // Wait till the line goes high - IDLE state, to transition to IDLE state.
+            uart_rx_fsm <= UART_RX_STATE_IDLE;
         end else begin 
-          rx_clk_counter++;
+          rx_clk_counter <= rx_clk_counter + 1'b1;
         end 
       end
       default: uart_rx_fsm <= UART_RX_STATE_IDLE; // Safety/default case: go to IDLE state
