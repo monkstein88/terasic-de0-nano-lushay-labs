@@ -39,17 +39,18 @@ vsim -modelsimini $PRECOMP_DEVICE_LIB_FILE -64 -wlf ./$TESTBENCH_MODULE.wlf -t 1
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider TB_CONTROLS:
-add wave -noupdate -label -NONE-
 add wave -noupdate -divider CLKs:
 add wave -noupdate -label CLK -radix binary /$TESTBENCH_MODULE/clk
 add wave -noupdate -divider INPUTs:
 add wave -noupdate -label ASYNC_RST_IN /$TESTBENCH_MODULE/async_rst
-add wave -noupdate -divider OUTPUTs:
-add wave -noupdate -label SYNCED_RST_OUT /$TESTBENCH_MODULE/synced_rst
-add wave -noupdate -divider UUT_INTERNALS:
-add wave -noupdate -label sync_ff  /$TESTBENCH_MODULE/$TESTBENCH_DUT_NAME/sync_ff 
+add wave -noupdate -divider {OUTPUTs (ACTIVE-LOW):}
+add wave -noupdate -label synced_rst /$TESTBENCH_MODULE/synced_rst_low
+add wave -noupdate -label {  UUT Internal: sync_ff} -radix binary -radixshowbase 0 -expand /$TESTBENCH_MODULE/${TESTBENCH_DUT_NAME}_ACTIVE_LOW/sync_ff
+add wave -noupdate -divider {OUTPUTs (ACTIVE-HIGH)}
+add wave -noupdate -label synced_rst /$TESTBENCH_MODULE/synced_rst_high
+add wave -noupdate -label {  UUT Internal: sync_ff} -radix binary -radixshowbase 0 -expand /$TESTBENCH_MODULE/${TESTBENCH_DUT_NAME}_ACTIVE_HIGH/sync_ff
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+WaveRestoreCursors {{Cursor 1} {270716 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 297
 configure wave -valuecolwidth 100
@@ -66,7 +67,6 @@ configure wave -timeline 0
 configure wave -timelineunits ns
 update
 wave zoom out
-WaveRestoreZoom {0 ns} {3098 ns}
 
 #run the simulation for the desired amount of time 
 view structure

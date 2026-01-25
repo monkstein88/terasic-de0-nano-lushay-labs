@@ -1,7 +1,7 @@
 module debounce #(
   parameter CLK_FREQ = 50_000_000, // Clock frequency in [Hz]
-  parameter DEBOUNCE_TIME_MS = 1,  // Debounce time in [ms]
-  parameter DEBOUNCE_INIT_VAL = 1'b0 // Initial (Idle) value of the debounced output after reset
+  parameter DEBOUNCE_TIME = 1,  // Debounce time in [ms]
+  parameter DEBOUNCE_INIT = 1'b0 // Initial (Idle) value (also reset-polarity) of the debounced output after reset
 )(
   input  wire  arst_n_i, // Asynchronous reset (active low)
   input  wire  clk_i,    // Clock input
@@ -10,7 +10,7 @@ module debounce #(
 );
 
 // Calculate the number of clock cycles for the debounce time
-localparam DEBOUNCE_CYCLES = (CLK_FREQ / 1000) * DEBOUNCE_TIME_MS;
+localparam DEBOUNCE_CYCLES = (CLK_FREQ / 1000) * DEBOUNCE_TIME;
 localparam DEBOUNCE_WIDTH = $clog2(DEBOUNCE_CYCLES + 1);
 
 // Internal signals
@@ -21,9 +21,9 @@ logic [DEBOUNCE_WIDTH-1:0] deb_counter = '0;
 // Synchronize the digital input to the clock domain - note the two-stage synchronizer and that it supposed to work with any input active level (high or low)
 always_ff @(negedge arst_n_i, posedge clk_i) begin
   if (arst_n_i != 1'b1) begin // Asynchronous reset - just pass through the input (bypass the debounce logic)
-    deb_sync_0 <= DEBOUNCE_INIT_VAL;
-    deb_sync_1 <= DEBOUNCE_INIT_VAL;
-    deb_o <= DEBOUNCE_INIT_VAL;
+    deb_sync_0 <= DEBOUNCE_INIT;
+    deb_sync_1 <= DEBOUNCE_INIT;
+    deb_o <= DEBOUNCE_INIT;
     deb_counter <= '0;
   end else begin
     deb_sync_0 <= din_i; // First stage of synchronization

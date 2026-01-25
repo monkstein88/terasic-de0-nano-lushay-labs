@@ -3,7 +3,7 @@
 module uart_com #(
   parameter CLK_FREQ = 50_000_000, // The provided xernal Clock Source's frequency, in [Hz]
   parameter UART_BAUDRATE = 115200, // UART Baudrate, in [bps]
-  parameter UART_DATA_BITS = 8 // Number of data bits in the UART frame
+  parameter UART_DATA_BITS = 8 // Data size in the UART frame [bits]
 )(
   input  wire arst_n_i,  // Asynchronous reset (active low)
   input  wire clk_i,     // Clock input

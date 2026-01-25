@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/DSP/Video and Image Processing,Library/University Program/Memory,Library,Library/University Program,Library/Basic Functions/On Chip Memory,Library/Basic Functions,Library/Memory Interfaces and Controllers/Memory Interfaces with AltMemPHY,Project,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Memory Interfaces and Controllers,Library/DSP,Library/University Program/Clock" />
+ <window width="1545" height="962" x="450" y="210" />
+</preferences>

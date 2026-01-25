@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "UART_TX_o",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EXTCLK_i",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "UART_RX_i",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_i[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

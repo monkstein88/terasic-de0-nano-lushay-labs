@@ -10,12 +10,12 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/MonkPC/workspaces/FPGA/Intel/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/simulation/questa
+Z1 dC:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/simulation/questa
 T_opt
-!s110 1768152509
-VWCcc]8DAF2kMD>[kAYnM:1
+!s110 1769211224
+VmOFM8MbEjQLZ[lccnVeGB2
 04 13 4 work reset_sync_tb fast 0
-=1-b44506c67a11-6963ddbd-10c-6f04
+=1-b44506c67a11-69740557-38c-9664
 R0
 !s12f OEM100
 !s12b OEM100
@@ -27,7 +27,7 @@ OL;O;2024.1;79
 vdebounce
 Z3 2../../hdl/debounce.sv|../../hdl/design_top.sv|../../hdl/reset_sync.sv|../../hdl/uart_com.sv
 Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z5 !s110 1768152508
+Z5 !s110 1769211223
 !i10b 1
 !s100 UA6FnSUnbEXcnDENkTQ131
 I_MbU<DmLSGTg]FDBJ=>Z<3
@@ -43,7 +43,7 @@ Z7 OL;L;2024.1;79
 r1
 !s85 0
 31
-Z8 !s108 1768152508.000000
+Z8 !s108 1769211222.000000
 Z9 !s107 ../../hdl/uart_com.sv|../../hdl/reset_sync.sv|../../hdl/design_top.sv|../../hdl/debounce.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl/|../../hdl/debounce.sv|../../hdl/design_top.sv|../../hdl/reset_sync.sv|../../hdl/uart_com.sv|
 !i113 0
@@ -55,11 +55,11 @@ R3
 R4
 R5
 !i10b 1
-!s100 5j2>KT3k1=O59_2So;zK_0
-IW=X4PPo2F9I==`XaNTQ6@3
+!s100 WbgLQbd6:?`>VSCa?egTl1
+IPXonWXIa9lb>Ra9HD0fm@0
 S1
 R1
-w1768148998
+w1768775042
 8../../hdl/design_top.sv
 F../../hdl/design_top.sv
 !i122 0
@@ -81,15 +81,15 @@ R3
 R4
 R5
 !i10b 1
-!s100 m;Rn3]mY<n@<J`d<YOBmA0
-I55zR>G9<o]zc0E[mFVW9B0
+!s100 O?_7e5gcY:TFdk_9eSLWf1
+I;Bb:mf08ZZE6L<M1E63b<1
 S1
 R1
-w1768148932
+w1769122894
 8../../hdl/reset_sync.sv
 F../../hdl/reset_sync.sv
 !i122 0
-L0 8 38
+L0 8 39
 R6
 R7
 r1
@@ -107,21 +107,21 @@ vreset_sync_tb
 R4
 R5
 !i10b 1
-!s100 d8lDMzZY0kA7kQCHl6hZR2
-I;oS299gf6_lznDZ0S<Xl10
+!s100 9ilg1WkXUcL3VV2c0CbOi3
+I93jZVPjYK_KE75hI?^EBK3
 S1
 R1
-w1768150766
+w1769122937
 8../../hdl_tb/reset_sync_tb.sv
 F../../hdl_tb/reset_sync_tb.sv
 !i122 1
-L0 4 91
+L0 4 188
 R6
 R7
 r1
 !s85 0
 31
-R8
+!s108 1769211223.000000
 !s107 ../../hdl_tb/reset_sync_tb.sv|../../hdl_tb/design_top_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+../../hdl_tb/|../../hdl_tb/design_top_tb.sv|../../hdl_tb/reset_sync_tb.sv|
 !i113 0
@@ -137,7 +137,7 @@ R5
 IeP41^IO=O8A7eBGiFoLkd0
 S1
 R1
-w1768149023
+w1768775084
 8../../hdl/uart_com.sv
 F../../hdl/uart_com.sv
 !i122 0

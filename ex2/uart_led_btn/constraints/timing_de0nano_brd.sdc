@@ -9,7 +9,7 @@ set_time_format -unit ns -decimal_places 3
 #**************************************************************
 # Create Clock
 #**************************************************************
-create_clock -name EXTCLK -period 20.000 [get_ports {EXTCLK}]
+create_clock -name EXTCLK_i -period 20.000 [get_ports {EXTCLK_i}]
 #create_clock -name {altera_reserved_tck} -period 62.500 -waveform { 0.000 31.250 } [get_ports {altera_reserved_tck}]
 
 #**************************************************************
@@ -46,7 +46,7 @@ derive_clock_uncertainty
 # Set False Path
 #**************************************************************
 # Asynchronous I/O
-set_false_path -from [get_ports KEY*] -to *
+set_false_path -from [get_ports KEY_i*] -to *
 #set_false_path -from * -to [get_ports LEDG* ]
 
 #**************************************************************

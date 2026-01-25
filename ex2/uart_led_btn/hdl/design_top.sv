@@ -6,7 +6,7 @@ module design_top #(
   parameter UART_BAUDRATE_BPS = 115200 // UART Baudrate, in [bps]
 )(
   input  wire                   EXTCLK_i,  // External Clock Source
-  input  wire  [KEY_WIDTH-1:0]  KEY_n_i,   // Buttons (active low) : KEY[0] is reset button, KEY[1] is user button
+  input  wire  [KEY_WIDTH-1:0]  KEY_i,   // Buttons (active low) : KEY[0] is reset button, KEY[1] is user button
   input  wire                   UART_RX_i, // UART receive (RX)
   output logic                  UART_TX_o, // UART transmit (TX)
   output logic [LEDG_WIDTH-1:0] LEDG_o     // (green) LEDs (active high)
@@ -24,10 +24,10 @@ logic [7:0] uart_tx_data = 8'h41; // Data to send via UART - default to ASCII ch
 
 // Instantiate the reset synchronization module:
 reset_sync #(
-  .RESET_POLARITY("LOW"), // Active low reset
+  .RESET_POLARITY(1'b0), // Active low reset
   .SYNC_STAGES(2)
 ) reset_sync_inst (
-  .async_rst_i(KEY_n_i[0]), // Pass the reset button input - KEY[0] and synchronize it
+  .async_rst_i(KEY_i[0]), // Pass the reset button input - KEY[0] and synchronize it
   .clk_i(EXTCLK_i),
   .synced_rst_o(arst_n) // "Synchronized" asynchronous reset output (active low)
 );
@@ -35,12 +35,12 @@ reset_sync #(
 // Instantiate the button debouncer module:
 debounce #(
   .CLK_FREQ(EXT_CLK_FREQ_HZ),
-  .DEBOUNCE_TIME_MS(10), // 10 [ms] debounce time
-  .DEBOUNCE_INIT_VAL(1'b1) // Initial (Idle) value of the debounced output after reset - the button idles at high (not pressed)
+  .DEBOUNCE_TIME(10), // 10 [ms] debounce time
+  .DEBOUNCE_INIT(1'b1) // Initial (Idle) value of the debounced output after reset - the button idles at high (not pressed)
 ) debounce_btn_inst (
   .arst_n_i(arst_n), // Asynchronous reset (active low)
   .clk_i(EXTCLK_i),
-  .din_i(KEY_n_i[1]), // Pass the user button input - KEY[1]
+  .din_i(KEY_i[1]), // Pass the user button input - KEY[1]
   .deb_o(btn_n) // Debounced button output (active low)
 );
 
@@ -61,6 +61,34 @@ uart_com #(
   .uart_tx_o(UART_TX_o)
 );
 
+// Control logic to handle button press and UART transmission
+always_ff @(posedge EXTCLK_i or negedge arst_n) begin
+  if (arst_n != 1'b1) begin
+    uart_tx_start <= 1'b0;
+    uart_tx_data <= 8'h41; // Reset to 'A' on reset
+  end else begin
+    if (btn_n == 1'b0 && uart_tx_busy == 1'b0) begin // Button pressed and UART not busy
+      uart_tx_start <= 1'b1; // Start transmission
+      if(uart_tx_data == 8'h5A) begin
+        uart_tx_data <= 8'h41; // Wrap around to 'A' after 'Z'
+      end else begin
+        uart_tx_data <= uart_tx_data + 1'b1; // Increment data to send next time
+      end
+    end else begin
+      uart_tx_start <= 1'b0; // Clear start signal
+    end
+  end
+end 
 
+// Connect received UART data to LEDs for visualization
+always_ff @(posedge EXTCLK_i or negedge arst_n) begin
+  if (arst_n != 1'b1) begin
+    LEDG_o <= '0; // Clear LEDs on reset
+  end else begin
+    if (uart_rx_ready == 1'b1) begin
+      LEDG_o <= uart_rx_data; // Display received data on LEDs
+    end
+  end
+end
 
 endmodule

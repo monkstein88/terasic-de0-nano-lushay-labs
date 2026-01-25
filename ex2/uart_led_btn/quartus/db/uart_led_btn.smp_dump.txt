@@ -1,0 +1,16 @@
+
+State Machine - |design_top|uart_com:uart_com_inst|uart_tx_fsm
+Name uart_tx_fsm.UART_TX_STATE_STOP_BIT uart_tx_fsm.UART_TX_STATE_WRITE_BIT uart_tx_fsm.UART_TX_STATE_START_BIT uart_tx_fsm.UART_TX_STATE_IDLE uart_tx_fsm.UART_TX_STATE_DONE 
+uart_tx_fsm.UART_TX_STATE_IDLE 0 0 0 0 0 
+uart_tx_fsm.UART_TX_STATE_START_BIT 0 0 1 1 0 
+uart_tx_fsm.UART_TX_STATE_WRITE_BIT 0 1 0 1 0 
+uart_tx_fsm.UART_TX_STATE_STOP_BIT 1 0 0 1 0 
+uart_tx_fsm.UART_TX_STATE_DONE 0 0 0 1 1 
+
+State Machine - |design_top|uart_com:uart_com_inst|uart_rx_fsm
+Name uart_rx_fsm.UART_RX_STATE_READ_BIT uart_rx_fsm.UART_RX_STATE_WAIT uart_rx_fsm.UART_RX_STATE_START_BIT uart_rx_fsm.UART_RX_STATE_IDLE uart_rx_fsm.UART_RX_STATE_STOP_BIT 
+uart_rx_fsm.UART_RX_STATE_IDLE 0 0 0 0 0 
+uart_rx_fsm.UART_RX_STATE_START_BIT 0 0 1 1 0 
+uart_rx_fsm.UART_RX_STATE_WAIT 0 1 0 1 0 
+uart_rx_fsm.UART_RX_STATE_READ_BIT 1 0 0 1 0 
+uart_rx_fsm.UART_RX_STATE_STOP_BIT 0 0 0 1 1 
