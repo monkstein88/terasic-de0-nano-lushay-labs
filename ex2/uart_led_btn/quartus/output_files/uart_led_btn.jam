@@ -15,7 +15,7 @@
 'refer to the Altera Software License Subscription Agreements 
 'on the Quartus Prime software download page.
 
-'Device #1: EP4CE22 - C:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/quartus/output_files/uart_led_btn.sof Sun Jan 25 19:47:08 2026
+'Device #1: EP4CE22 - C:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/quartus/output_files/uart_led_btn.sof Sun Jan 25 22:32:53 2026
 
 
 NOTE "CREATOR" "QUARTUS PRIME JAM COMPOSER 25.1";
@@ -3195,4 +3195,4 @@ ENDPROC;
 
 
 ' END OF FILE
-CRC 2FDA;
+CRC 4B94;

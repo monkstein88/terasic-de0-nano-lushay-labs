@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition"
 
-// DATE "01/25/2026 19:47:12"
+// DATE "01/25/2026 22:32:58"
 
 // 
 // Device: Altera EP4CE22F17C6 Package FBGA256
@@ -27,7 +27,7 @@
 // This Verilog file should be used for QuestaSim (SystemVerilog) only
 // 
 
-`timescale 1 ns/ 1 ps
+`timescale 1 ps/ 1 ps
 
 module design_top (
 	EXTCLK_i,

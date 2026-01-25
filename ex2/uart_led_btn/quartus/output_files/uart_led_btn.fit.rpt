@@ -1,5 +1,5 @@
 Fitter report for uart_led_btn
-Sun Jan 25 19:47:06 2026
+Sun Jan 25 22:32:52 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 
 
@@ -66,7 +66,7 @@ on the Quartus Prime software download page.
 +------------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                           ;
 +------------------------------------+-----------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jan 25 19:47:06 2026               ;
+; Fitter Status                      ; Successful - Sun Jan 25 22:32:51 2026               ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Standard Edition ;
 ; Revision Name                      ; uart_led_btn                                        ;
 ; Top-level Entity Name              ; design_top                                          ;
@@ -155,7 +155,7 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.15        ;
+; Average used               ; 1.16        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -1203,7 +1203,7 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin EXTCLK_i uses I/O standard 3.3-V LVTTL at R8 File: C:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/hdl/design_top.sv Line: 8
     Info (169178): Pin KEY_i[0] uses I/O standard 3.3-V LVTTL at J15 File: C:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/hdl/design_top.sv Line: 9
@@ -1211,10 +1211,10 @@ Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin KEY_i[1] uses I/O standard 3.3-V LVTTL at E1 File: C:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/hdl/design_top.sv Line: 9
 Info (144001): Generated suppressed messages file C:/Users/MonkPC/workspaces/FPGA/Altera/CycloneIV/DE0-NANO/terasic-de0-nano-lushay-labs/ex2/uart_led_btn/quartus/output_files/uart_led_btn.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 6372 megabytes
-    Info: Processing ended: Sun Jan 25 19:47:06 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 6380 megabytes
+    Info: Processing ended: Sun Jan 25 22:32:52 2026
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+

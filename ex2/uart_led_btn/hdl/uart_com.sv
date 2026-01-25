@@ -100,7 +100,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
     // Optional: clear internal counters/buffers
     tx_clk_counter <= 0;
     tx_bit_counter <= 0;
-    tx_data_buf = '0; 
+    tx_data_buf <= '0; 
   end else begin // Syncrhonous part - fsm processing
     case(uart_tx_fsm) 
       UART_TX_STATE_IDLE: begin 
@@ -120,7 +120,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
           tx_bit_counter <= 0;
           uart_tx_fsm <= UART_TX_STATE_WRITE_BIT;
         end else begin
-          tx_clk_counter++;
+          tx_clk_counter <= tx_clk_counter + 1'b1;
         end
       end
       UART_TX_STATE_WRITE_BIT: begin 
@@ -130,10 +130,10 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
           if(tx_bit_counter == UART_DATA_BITS - 1) begin 
             uart_tx_fsm <= UART_TX_STATE_STOP_BIT;
           end else begin 
-            tx_bit_counter++;
+            tx_bit_counter <= tx_bit_counter + 1'b1;
           end
         end else begin 
-          tx_clk_counter++;
+          tx_clk_counter <= tx_clk_counter + 1'b1;
         end
       end
       UART_TX_STATE_STOP_BIT: begin 
@@ -142,7 +142,7 @@ always_ff @(negedge arst_n_i, posedge clk_i) begin
           tx_busy_o <= 1'b0; 
           uart_tx_fsm <= UART_TX_STATE_DONE;
         end else begin 
-          tx_clk_counter++;
+          tx_clk_counter <= tx_clk_counter + 1'b1;
         end
       end
       UART_TX_STATE_DONE: begin 
